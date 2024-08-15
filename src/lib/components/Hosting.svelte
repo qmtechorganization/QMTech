@@ -2,15 +2,15 @@
 
 </script>
 
-<section class="px-8 md:px-24 py-32 ">
-    <div class="flex flex-wrap -m-4">
+<section class="px-4 md:px-24 py-32 content-center container mx-auto">
+    <div class="container flex flex-wrap -m-4">
       <div class="w-full lg:w-1/3 p-4">
         <p class="tracking-tight text-orange-400 font-medium mb-6">Reliable, Fast, and Secure</p>
         <h1 class="font-heading tracking-tight text-4xl md:text-6xl font-medium mb-6 max-w-xs md:max-w-lg">Web Hosting Made Simple</h1>
         <p class="tracking-tight text-gray-700 text-lg max-w-md mb-32">Streamline your web hosting experience with our straightforward, reliable, and secure plans.</p>
         <div class="w-full h-px bg-gray-200 mb-14"></div>
         <p class="tracking-tight text-lg font-semibold mb-2">
-          Protected by Cloudflare
+          Protected by <span><img class="w-5" src="src\assets\images\CF_logo_stacked_whitetype.png" alt="cloudflare"></span>
           <br>
         </p>
       </div>

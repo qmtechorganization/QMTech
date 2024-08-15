@@ -4,15 +4,15 @@
   
 
 <section class="px-4 md:px-20 pb-16 bg-no-repeat bg-cover relative pt-24 lg:bg-center bg-right bg-black bg-blend-overlay bg-opacity-60" style="background-image: url('https://static.shuffle.dev/uploads/files/ec/ec578d7e076a0dfd4b92738b77ade3a71968172c/3860.jpg')">
-    <div x-data="{ mobileNavOpen: false }">
-      <div :class="{'hidden': !mobileNavOpen}" class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
-        <div x-on:click.prevent="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-black opacity-20"></div>
+    <div >
+      <div class:hidden={!mobileNavOpen} class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-xs z-50">
+        <div on:click={() => mobileNavOpen = !mobileNavOpen} class="fixed inset-0 bg-black opacity-20"></div>
         <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
           <div class="flex items-center justify-between">
             <a href="#" class="inline-block">
               <img class="h-7" src="consulty-assets/logos/consulty-logo2.svg" alt="">
             </a>
-            <a x-on:click.prevent="mobileNavOpen = !mobileNavOpen" href="#">
+            <a href="#" on:click|preventDefault={() => mobileNavOpen = !mobileNavOpen}>
               <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
