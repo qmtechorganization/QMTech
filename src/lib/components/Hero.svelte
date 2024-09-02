@@ -10,7 +10,7 @@
         <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
           <div class="flex items-center justify-between">
             <a href="#" class="inline-block">
-              <img class="h-7" src="consulty-assets/logos/consulty-logo2.svg" alt="">
+              <img class="h-7" src="/src/assets/consulty-assets/logos/consulty-logo2.svg" alt="">
             </a>
             <a href="#" on:click|preventDefault={() => mobileNavOpen = !mobileNavOpen}>
               <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

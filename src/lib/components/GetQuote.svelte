@@ -1,10 +1,10 @@
 <script>
-    
+  
 </script>
 
 <section class="px-8 md:px-24 py-32 bg-black relative overflow-hidden ">
   <div class="container mx-auto px-4">  
-  <img class="absolute left-0 top-1/2 transform -translate-y-1/2 h-80" src="consulty-assets/contact/shape1.svg" alt="">
+  <img class="absolute left-0 top-1/2 transform -translate-y-1/2 h-80" src="/src/assets/consulty-assets/contact/shape1.svg" alt="">
     <div class="flex flex-wrap -m-4">
       <div class="w-full lg:w-1/2 p-4">
         <div class="flex flex-col justify-between gap-8 h-full">
