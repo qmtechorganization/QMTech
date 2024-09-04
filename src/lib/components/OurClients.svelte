@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { clientStore } from '$lib/stores/clientStore';
+    import { clientStore } from '$lib/stores/collentionsStore';
     
     let clients = [];
     
@@ -11,7 +11,7 @@
 //flex-shrink-0
 </script>
 
-<div class="px-8 md:px-24 py-24 container mx-auto px-4">
+<div class="px-8 md:px-24 py-2 container mx-auto px-4">
     <div class="flex flex-wrap -m-4">
       <div class="w-full lg:w-1/2 p-4 justify-center flex sm:justify-start">
         <h2 class="tracking-tight lg:my-auto max-w-xs text-6xl">

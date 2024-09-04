@@ -1,10 +1,11 @@
-<section class="pt-40 pb-32 px-8 md:px-24 container mx-auto px-4">
+
+<section id="about-us" class="pt-40 pb-32 px-8 md:px-24 container mx-auto px-4">
     <div class="flex flex-wrap -m-4 mb-16">
       <div class="w-full lg:w-1/3 p-4">
-        <img class="rounded-2xl object-cover w-full" style="height:335px;" src="src\assets\consulty-assets\about\picture11.png" alt="">
+        <img class="rounded-2xl object-cover w-full" style="height:335px;" src="src/assets/images/aboutUs/aboutUs1.jpg" alt="">
       </div>
       <div class="w-full lg:w-2/3 p-4">
-        <img class="rounded-2xl object-cover w-full" style="height:422px;" src="src\assets\consulty-assets/about/picture12.png" alt="">
+        <img class="rounded-2xl object-cover w-full" style="height:422px;" src="src/assets/images/aboutUs/aboutUs2.jpg" alt="">
       </div>
     </div>
     <div class="flex flex-wrap -m-4">

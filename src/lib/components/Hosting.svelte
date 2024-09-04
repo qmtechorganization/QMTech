@@ -2,17 +2,18 @@
 
 </script>
 
-<section class="px-4 md:px-24 py-32 content-center container mx-auto">
+<section class="px-4 md:px-24 py-10 content-center container mx-auto">
     <div class="container flex flex-wrap -m-4">
       <div class="w-full lg:w-1/3 p-4">
         <p class="tracking-tight text-orange-400 font-medium mb-6">Reliable, Fast, and Secure</p>
         <h1 class="font-heading tracking-tight text-4xl md:text-6xl font-medium mb-6 max-w-xs md:max-w-lg">Web Hosting Made Simple</h1>
-        <p class="tracking-tight text-gray-700 text-lg max-w-md mb-32">Streamline your web hosting experience with our straightforward, reliable, and secure plans.</p>
+        <p class="tracking-tight text-body text-lg max-w-md mb-32">Streamline your web hosting experience with our straightforward, reliable, and secure plans.</p>
         <div class="w-full h-px bg-gray-200 mb-14"></div>
-        <p class="tracking-tight text-lg font-semibold mb-2">
-          Protected by <span><img class="w-5" src="src\assets\images\CF_logo_stacked_whitetype.png" alt="cloudflare"></span>
-          <br>
-        </p>
+        <p class="flex items-center tracking-tight text-lg font-semibold mb-2">
+          Protected by
+          <img class="w-24 ml-6 mb-4" src="src/assets/images/CF_logo_stacked_whitetype.png" alt="cloudflare">
+      </p>
+      
       </div>
       <div class="w-full lg:w-2/3 p-4">
         <div class="flex lg:justify-end">
@@ -84,7 +85,7 @@
                       <span class="tracking-tight font-medium">Malware Scanner</span>
                     </li>
                   </ul>
-                  <a href="#" class="bg-white h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:bg-gray-100 focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 tracking-tight font-bold transition duration-200 text-black">Get Started Now</a>
+                  <a href="#" class="bg-white hover:bg-hover h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:text-body tracking-tight font-bold transition duration-200 text-black hover:text-hover">Get Started Now</a>
                 </div>
               </div>
               <div class="w-80 flex-shrink-0">
@@ -147,7 +148,7 @@
                       <span class="tracking-tight font-medium">Malware Scanner</span>
                     </li>
                   </ul>
-                  <a href="#" class="bg-white h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:bg-gray-100 focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 tracking-tight font-bold transition duration-200 text-black">Get Started Now</a>
+                  <a href="#" class="bg-white h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:bg-hover hover:text-body focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 tracking-tight font-bold transition duration-200 text-black">Get Started Now</a>
                 </div>
               </div>
             </div>

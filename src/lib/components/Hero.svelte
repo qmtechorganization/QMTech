@@ -10,7 +10,7 @@
         <nav class="relative p-8 w-full h-full bg-white overflow-y-auto">
           <div class="flex items-center justify-between">
             <a href="#" class="inline-block">
-              <img class="h-7" src="/src/assets/consulty-assets/logos/consulty-logo2.svg" alt="">
+              <img class="h-7" src="/src/assets/consulty-assets/logos/consulty-logo2.svg" alt="">gfdgdfgfdgfdgdgfdgdfggf
             </a>
             <a href="#" on:click|preventDefault={() => mobileNavOpen = !mobileNavOpen}>
               <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@
     <h1 class="font-heading tracking-tight text-white text-center text-5xl md:text-7xl max-w-lg md:max-w-5xl mx-auto mb-6 font-bold">"Tailored Tech Solutions for Your Success"</h1>
     <p class="text-white tracking-tight mb-10 text-center text-xl text-opacity-80 max-w-xl mx-auto">From custom applications to efficient management systems, we support you at every step to ensure your technology meets your needs and drives your company's success.</p>
     <div class="flex flex-wrap justify-center gap-4 mb-32">
-      <a href="#" class="bg-orange-500 h-16 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">
+      <a href="#getQuote" class="bg-orange-500 h-16 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">
         <span class="text-white font-bold tracking-tight">Get A Free Consultation</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
           <path d="M14 6.66667H7.33333C4.38781 6.66667 2 9.05449 2 12V13.3333M14 6.66667L10 10.6667M14 6.66667L10 2.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

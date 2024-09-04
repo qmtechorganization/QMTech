@@ -5,12 +5,12 @@
 <div class="py-16">
     <div class="container mx-auto px-4">
       <div class="flex items-center justify-between flex-wrap gap-8 pb-12 border-b border-gray-100 mb-12">
-        <img class="h-7" src="consulty-assets/logos/consulty-logo2.svg" alt="">
-        <ul class="flex gap-5 flex-wrap">
-          <li><a href="#" class="text-gray-800 tracking-tight hover:text-orange-400 transition duration-200">Services</a></li>
-          <li><a href="#" class="text-gray-800 tracking-tight hover:text-orange-400 transition duration-200">Our Work</a></li>
-          <li><a href="#" class="text-gray-800 tracking-tight hover:text-orange-400 transition duration-200">About Us</a></li>
-          <li><a href="#" class="text-gray-800 tracking-tight hover:text-orange-400 transition duration-200">FAQs</a></li>
+        <img class="h-7 " src="/src/assets/consulty-assets/logos/consulty-logo2.svg" alt="">
+        <ul class="flex gap-5 flex-wrap text-">
+          <li><a href="#" class="text-body tracking-tight hover:text-hover transition duration-200">Services</a></li>
+          <li><a href="#" class="text-body tracking-tight hover:text-hover transition duration-200">Our Work</a></li>
+          <li><a href="#" class="text-body tracking-tight hover:text-hover transition duration-200">About Us</a></li>
+          <li><a href="#" class="text-body tracking-tight hover:text-hover transition duration-200">FAQs</a></li>
         </ul>
         <div class="flex flex-wrap gap-6">
           <a href="#" class="text-gray-400 hover:text-gray-500 transition duration-200">
@@ -30,6 +30,6 @@
           </a>
         </div>
       </div>
-      <p class="tracking-tight text-center text-gray-600 text-sm">Spreading love © 2023 Consulty. All rights reserved.</p>
+      <p class="tracking-tight text-center text-gray-600 text-sm">Quality Matters Tech © 2024. All rights reserved.</p>
     </div>
   </div>

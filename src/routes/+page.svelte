@@ -1,7 +1,7 @@
 <script lang="ts">
     import { onMount } from 'svelte';
     import PocketBase from "pocketbase";
-    import { clientStore } from '$lib/stores/clientStore';
+    import { clientStore, servicesStore } from '$lib/stores/collentionsStore';
     import Header from "$lib/components/Header.svelte";
     import Hero from "$lib/components/Hero.svelte";
     import Services from "$lib/components/Services.svelte";
@@ -20,9 +20,22 @@
             const clients = await pb.collection('clients').getFullList();
             console.log('Fetched clients:', clients);
             clientStore.set(clients);
+        
         } catch (error) {
             console.error('Failed to fetch client records:', error);
         }
+
+        try {
+            let services = await pb.collection('services').getFullList({
+                sort: '+order'
+            });
+            console.log('Fetched Services:', services);
+            servicesStore.set(services);
+
+        } catch (error) {
+            console.error('Failed to fetch services records:', error);
+        }
+
     });
     </script>
     
@@ -32,9 +45,9 @@
 <Hero></Hero>
 <Services></Services>
 <Hosting></Hosting>
-<HowWeWork></HowWeWork>
 <AboutUs></AboutUs>
 <OurClients></OurClients>
+<HowWeWork></HowWeWork>
 <GetQuote></GetQuote>
 <Faq></Faq>
 <Footer></Footer>
