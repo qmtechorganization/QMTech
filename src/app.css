@@ -1,0 +1,44 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
+
+
+body {
+  @apply bg-body;
+  @apply antialiased;
+  @apply text-body
+}
+
+.custom-switch-1:checked + div {
+  @apply left-1/2;
+  @apply bg-white;
+}
+
+.custom-checkbox-1:checked + span {
+  @apply bg-orange-500;
+  @apply border-orange-600;
+}
+
+.custom-checkbox-1:checked + span svg {
+  @apply block;
+}
+
+.custom-radio-1:checked + span {
+  @apply bg-orange-50;
+  @apply border-orange-500;
+}
+
+.custom-radio-1:checked + span svg {
+  @apply block;
+}
+
+.custom-inline-radio-1:checked + span {
+  @apply bg-orange-50;
+  @apply border-orange-500;
+}
+
+.custom-inline-radio-1:checked + span svg {
+  @apply block;
+}
+
