@@ -44,7 +44,7 @@
           </ul>
           <div class="flex flex-col gap-4">
             <a href="#" class="rounded-full border border-gray-700 px-5 py-3 h-14 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 inline-flex items-center justify-center transition duration-200 text-sm font-semibold tracking-tight">Sign In</a>
-            <a href="#" class="rounded-full bg-black px-5 py-3 h-14 hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 inline-flex items-center justify-center gap-2 transition duration-200">
+            <a href="#" class="rounded-full bg-black px-5 py-3 h-14 hover:bg-green-600 focus:bg-green-500 focus:ring-4 focus:ring-green-200 inline-flex items-center justify-center gap-2 transition duration-200">
               <span class="text-white text-sm font-semibold tracking-tight">Get A Free Consultation</span>
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
                 <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
@@ -57,7 +57,7 @@
     <h1 class="font-heading tracking-tight text-white text-center text-5xl md:text-7xl max-w-lg md:max-w-5xl mx-auto mb-6 font-bold">"Tailored Tech Solutions for Your Success"</h1>
     <p class="text-white tracking-tight mb-10 text-center text-xl text-opacity-80 max-w-xl mx-auto">From custom applications to efficient management systems, we support you at every step to ensure your technology meets your needs and drives your company's success.</p>
     <div class="flex flex-wrap justify-center gap-4 mb-32">
-      <a href="#getQuote" class="bg-orange-500 h-16 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-orange-600 focus:bg-orange-500 focus:ring-4 focus:ring-orange-200 transition duration-200">
+      <a href="#getQuote" class="bg-green-500 h-16 rounded-full px-6 py-4 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-green-600 focus:bg-green-500 focus:ring-4 focus:ring-green-200 transition duration-200">
         <span class="text-white font-bold tracking-tight">Get A Free Consultation</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
           <path d="M14 6.66667H7.33333C4.38781 6.66667 2 9.05449 2 12V13.3333M14 6.66667L10 10.6667M14 6.66667L10 2.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>

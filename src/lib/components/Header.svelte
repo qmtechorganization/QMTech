@@ -7,7 +7,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-6">
           <a href="#" class="inline-block">
-            <img class="w-48" src="https://static.shuffle.dev/uploads/files/ec/ec578d7e076a0dfd4b92738b77ade3a71968172c/QM-Logo.png" alt="">
+            <p class="w-64 text-green-700 text-3xl">QM TECH</p>
           </a>
           <ul class="hidden lg:flex items-center gap-2">
             <li><a href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-sm font-medium tracking-tight rounded-full">Services</a></li>
