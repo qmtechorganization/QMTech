@@ -85,7 +85,7 @@
                       <span class="tracking-tight font-medium">Malware Scanner</span>
                     </li>
                   </ul>
-                  <a href="#" class="bg-white hover:bg-hover h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:text-body tracking-tight font-bold transition duration-200 text-black hover:text-hover">Get Started Now</a>
+                  <a href="#" class="bg-white hover:bg-hover h-16 w-full border border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:text-body tracking-tight font-bold transition duration-200 text-black">Get Started Now</a>
                 </div>
               </div>
               <div class="w-80 flex-shrink-0">

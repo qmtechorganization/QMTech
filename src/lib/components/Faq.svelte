@@ -67,12 +67,12 @@
                 <div class="pb-8 border-b border-gray-100 mb-8 cursor-pointer" on:click={() => toggleAccordion(index)}>
                     <div class="flex items-center justify-between gap-4">
                         <p class="tracking-tight text-xl font-semibold">{accordion.title}</p>
-                        <div class={accordion.open ? 'hidden' : 'bg-white hover:bg-orange-400 text-black hover:text-white transition duration-200 focus:bg-orange-400 focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full'}>
+                        <div class={accordion.open ? 'hidden' : 'bg-white hover:bg-accent text-black hover:text-white transition duration-200 focus:bg-accent focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full'}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 4V8M8 8V12M8 8H12M8 8L4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                             </svg>
                         </div>
-                        <div class={accordion.open ? 'bg-white hover:bg-orange-400 text-black hover:text-white transition duration-200 focus:bg-orange-400 focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full' : 'hidden'}>
+                        <div class={accordion.open ? 'bg-white hover:bg-accent text-black hover:text-white transition duration-200 focus:bg-accent focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full' : 'hidden'}>
                             
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M12 8H4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

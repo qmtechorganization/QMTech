@@ -1,6 +1,5 @@
 <script lang="ts">
     import { onMount } from 'svelte';
-    import PocketBase from "pocketbase";
     import { clientStore, servicesStore } from '$lib/stores/collentionsStore';
     import Header from "$lib/components/Header.svelte";
     import Hero from "$lib/components/Hero.svelte";
@@ -12,8 +11,7 @@
     import GetQuote from "$lib/components/GetQuote.svelte";
     import Faq from "$lib/components/Faq.svelte";
     import AboutUs from "$lib/components/AboutUs.svelte";
-    
-    const pb = new PocketBase('https://qmtechbase.ezhostingit.com');
+    import { pb } from "$lib/pocketobase";
     
     onMount(async () => {
         try {
@@ -39,7 +37,6 @@
     });
     </script>
     
-    <!-- Your component template here -->
 
 <Header></Header>
 <Hero></Hero>

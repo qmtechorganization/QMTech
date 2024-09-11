@@ -7,7 +7,7 @@
       <div class="flex items-center justify-between">
         <div class="flex items-center gap-6">
           <a href="#" class="inline-block">
-            <p class="w-64 text-lime-500 text-3xl">QM Tech</p>
+            <p class="w-64 text-accent text-3xl">QM Tech</p>
           </a>
           <ul class="hidden lg:flex items-center gap-2">
             <li><a href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-sm font-medium tracking-tight rounded-full">Services</a></li>
@@ -16,10 +16,10 @@
             <li><a href="#faqs" class="nav-menu">FAQs</a></li>
           </ul>
         </div>
-        <a href="#getQuote" class="rounded-full border border-gray-200 bg-white px-5 py-3 h-14 hover:bg-gray-50 focus:ring-4 focus:ring-gray-200 hidden lg:inline-flex items-center justify-center gap-2 transition duration-200">
-          <span class="text-sm font-semibold tracking-tight text-black">Get A Quote</span>
+        <a href="#getQuote" class="rounded-full border border-gray-200 bg-accent px-5 py-3 h-14 hover:bg-hover focus:ring-4 focus:ring-gray-200 hidden lg:inline-flex items-center justify-center gap-2 transition duration-200">
+          <span class="text-sm font-semibold tracking-tight text-body">Get A Quote</span>
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-            <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
           </svg>
         </a>
         <a on:click={() => mobileNavOpen = !mobileNavOpen} href="#" class="lg:hidden">
