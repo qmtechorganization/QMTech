@@ -24,7 +24,7 @@ async function handleSubmit(event) {
   };
 
   try {
-    const response = await fetch('https://api.tech.io/send-email', {
+    const response = await fetch('https://qmtechapi.q-matters.com/api/mail', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -32,19 +32,12 @@ async function handleSubmit(event) {
       body: JSON.stringify({
         subject: 'New Quote Request',
         body: `
-          Hello,
-
-          You have received a new quote request. Here are the details:
 
           - Name: ${payload.name}
           - Email: ${payload.email}
           - Service: ${payload.service}
           - Message: ${payload.message}
-
-          Please respond to the inquiry at your earliest convenience.
-
-          Best regards,
-          Your Company Name
+         
         `
       })
     });
