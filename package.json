@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "dev": "vite dev",
+    "dev": "vite dev --host --port 5",
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
@@ -32,6 +32,7 @@
   },
   "type": "module",
   "dependencies": {
+    "i18n": "^0.15.1",
     "pocketbase": "^0.21.4"
   }
 }
