@@ -60,13 +60,13 @@
 <section id="faqs" class="pt-24">
     <div class="container mx-auto px-4">
         <h1 class="font-heading tracking-tight text-center text-4xl md:text-6xl font-medium mb-12">FAQ</h1>
-        <div class="rounded-2xl p-8 md:p-16 mb-12">
+        <div class="rounded-2xl p-8 md:px16">
             {#each accordions as accordion, index}
                 <!-- svelte-ignore a11y-click-events-have-key-events -->
                 <!-- svelte-ignore a11y-no-static-element-interactions -->
                 <div class="pb-8 border-b border-gray-100 mb-8 cursor-pointer" on:click={() => toggleAccordion(index)}>
-                    <div class="flex items-center justify-between gap-4">
-                        <p class="tracking-tight text-xl font-semibold">{accordion.title}</p>
+                    <div class="flex items-center justify-between w-full gap-4">
+                        <p class="tracking-tight w-3/4 text-xl font-semibold">{accordion.title}</p>
                         <div class={accordion.open ? 'hidden' : 'bg-white hover:bg-accent text-black hover:text-white transition duration-200 focus:bg-accent focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full'}>
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                                 <path d="M8 4V8M8 8V12M8 8H12M8 8L4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>

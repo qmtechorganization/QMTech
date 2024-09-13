@@ -2,9 +2,9 @@
     
 </script>
 
-<div class="py-16">
+<div class="py-8">
     <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between flex-wrap gap-8 pb-12 border-b border-gray-100 mb-12">
+      <div class="flex items-center justify-center sm:justify-between flex-wrap gap-8 pb-12 border-b border-gray-100 mb-12">
         <a href="#heroHome" class="inline-block">
           <p class="text-accent text-3xl">QM Tech</p>
         </a>        

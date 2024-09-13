@@ -57,9 +57,9 @@ async function handleSubmit(event) {
   
 </script>
 
-<section id="getQuote" class="px-8 md:px-24 pt-10 bg-body relative overflow-hidden">
-  <div class="container flex mx-auto px-4">
-    <div class="flex flex-wrap -m-4 w-full">
+<section id="getQuote" class="px-8 md:px-24 pt-10 bg-body relative overflow-hidden container mx-auto">
+  <div class="container flex mx-auto ">
+    <div class="flex flex-wrap  w-full">
       <div class="w-full lg:w-1/2 p-4">
         <div class="flex flex-col gap-10 h-full">
           <h1 class="font-heading tracking-tight text-white text-5xl md:text-6xl font-medium">
@@ -70,7 +70,7 @@ async function handleSubmit(event) {
             Our team of expert software developers is here to help you achieve your business goals by providing tailored solutions perfectly suited to your requirements.
           </p>
           <div class="relative overflow-hidden h-[30rem] w-full">
-            <img class="absolute inset-0 w-[80%] h-full object-cover object-center rounded-lg" src="src/assets/images/getQuote/getQuote.jpg" alt="Get Quote">
+            <img class="absolute inset-0 md:w-[80%] w-full h-full object-cover object-center rounded-lg" src="src/assets/images/getQuote/getQuote.jpg" alt="Get Quote">
           </div>
         </div>
         
@@ -117,7 +117,7 @@ async function handleSubmit(event) {
               <textarea id="contact2-input4" bind:value={message} rows="5" class="w-full px-6 py-4 bg-body text-white rounded-3xl resize-none mb-4 border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="Write your message" required></textarea>
               
               <!-- Submit button -->
-              <button type="submit" class="bg-accent h-16 rounded-full py-4 inline-flex items-center justify-center gap-2 hover:bg-gray-100 focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition duration-200 px-10">
+              <button type="submit" class="bg-accent w-full h-16 rounded-full py-4 inline-flex items-center justify-center gap-2 hover:bg-hover focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition duration-200 px-10">
                 <span class="font-bold tracking-tight text-body">Send</span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                   <path d="M14 6.66663H7.33333C4.38781 6.66663 2 9.05444 2 12V13.3333M14 6.66663L10 10.6666M14 6.66663L10 2.66663" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
