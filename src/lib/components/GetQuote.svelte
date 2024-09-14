@@ -70,7 +70,7 @@ async function handleSubmit(event) {
             Our team of expert software developers is here to help you achieve your business goals by providing tailored solutions perfectly suited to your requirements.
           </p>
           <div class="relative overflow-hidden h-[30rem] w-full">
-            <img class="absolute inset-0 md:w-[80%] w-full h-full object-cover object-center rounded-lg" src="src/assets/images/getQuote/getQuote.jpg" alt="Get Quote">
+            <img class="absolute inset-0 md:w-[80%] w-full h-full object-cover object-center rounded-lg" src="/images/getQuote/getQuote.jpg" alt="Get Quote">
           </div>
         </div>
         

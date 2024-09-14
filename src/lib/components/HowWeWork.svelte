@@ -5,19 +5,19 @@
       number: '01',
       title: 'Bring the Idea',
       description: 'Share your tech challenge or vision with us, and we’ll craft a roadmap to achieve it.',
-      image: 'src/assets/images/howWeWork/analyze-the-idea.jpg'
+      image: '/images/howWeWork/analyze-the-idea.jpg'
     },
     {
       number: '02',
       title: 'We Analyze',
       description: 'Our experts dive deep into your requirements, analyzing every aspect to ensure the best solution.',
-      image: 'src/assets/images/howWeWork/bring-the-idea.jpg'
+      image: '/images/howWeWork/bring-the-idea.jpg'
     },
     {
       number: '03',
       title: 'You Decide, We Execute',
       description: 'Once you approve the plan, our team delivers precise execution, turning your vision into reality.',
-      image: 'src/assets/images/howWeWork/decide-execute.jpg'
+      image: '/images/howWeWork/decide-execute.jpg'
     }
     ];
   </script>
