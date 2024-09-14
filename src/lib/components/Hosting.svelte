@@ -11,7 +11,7 @@
         <div class="w-full h-px bg-gray-200 mb-14"></div>
         <p class="flex items-center tracking-tight text-lg font-semibold mb-2">
           Protected by
-          <img class="w-24 ml-6 mb-4" src="src/assets/images/CF_logo_stacked_whitetype.png" alt="cloudflare">
+          <img class="w-24 ml-6 mb-4" src="/images/CF_logo_stacked_whitetype.png" alt="cloudflare">
       </p>
       
       </div>
