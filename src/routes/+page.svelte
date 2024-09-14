@@ -16,7 +16,7 @@
     onMount(async () => {
         try {
             const clients = await pb.collection('clients').getFullList();
-            console.log('Fetched clients:', clients);
+            //console.log('Fetched clients:', clients);
             clientStore.set(clients);
         
         } catch (error) {
@@ -27,7 +27,7 @@
             let services = await pb.collection('services').getFullList({
                 sort: '+order'
             });
-            console.log('Fetched Services:', services);
+            //console.log('Fetched Services:', services);
             servicesStore.set(services);
 
         } catch (error) {
