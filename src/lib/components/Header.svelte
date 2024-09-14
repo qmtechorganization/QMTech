@@ -11,7 +11,6 @@
           </a>
           <ul class="hidden lg:flex items-center gap-2">
             <li><a href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">Services</a></li>
-            <li><a href="#our-work" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">Our Work</a></li>
             <li><a href="#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">About Us</a></li>
             <li><a href="#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">FAQs</a></li>
           </ul>
@@ -44,13 +43,12 @@
           </a>
         </div>
         <ul class="flex flex-col gap-8 py-12">
-            <li><a href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">Services</a></li>
-            <li><a href="#our-work" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">Our Work</a></li>
-            <li><a href="#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">About Us</a></li>
-            <li><a href="#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">FAQs</a></li>
+            <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">Services</a></li>
+            <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">About Us</a></li>
+            <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">FAQs</a></li>
         </ul>
         <div class="flex flex-col gap-4">
-          <a href="#" class="rounded-full bg-accent px-5 py-3 h-14 hover:bg-hover focus:bg-hover focus:ring-4 focus:ring-orange-200 inline-flex items-center justify-center gap-2 transition duration-200">
+          <a on:click={() => mobileNavOpen = !mobileNavOpen} href="#getQuote" class="rounded-full bg-accent px-5 py-3 h-14 hover:bg-hover focus:bg-hover focus:ring-4 focus:ring-orange-200 inline-flex items-center justify-center gap-2 transition duration-200">
             <span class="text-white text-sm font-semibold tracking-tight">Get A Free Consultation</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
               <path d="M14 6.66666H7.33333C4.38781 6.66666 2 9.05447 2 12V13.3333M14 6.66666L10 10.6667M14 6.66666L10 2.66666" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
