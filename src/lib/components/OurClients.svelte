@@ -5,6 +5,7 @@
     
     $: clients = $clientStore;
     
+    
     //$: {
       //  console.log('Clients in OurClients.svelte:', clients);
     //}
@@ -38,7 +39,7 @@
         </div>
         <div class="w-full  p-4">
           <div class="bg-transparent border-2 rounded-2xl py-8">
-            <h2 class="font-heading tracking-tight text-6xl font-medium text-center mb-1">2</h2>
+            <h2 class="font-heading tracking-tight text-6xl font-medium text-center mb-1">{clients.length}</h2>
             <p class="tracking-tight text-body text-center">Projects completed</p>
           </div>
         </div>
