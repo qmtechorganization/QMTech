@@ -10,7 +10,6 @@
         </a>        
         <ul class="flex gap-5 flex-wrap text-">
           <li><a href="#services" class="text-body tracking-tight hover:text-hover transition duration-200">Services</a></li>
-          <li><a href="#ourWork" class="text-body tracking-tight hover:text-hover transition duration-200">Our Work</a></li>
           <li><a href="#about-us" class="text-body tracking-tight hover:text-hover transition duration-200">About Us</a></li>
           <li><a href="#faqs" class="text-body tracking-tight hover:text-hover transition duration-200">FAQs</a></li>
         </ul>
