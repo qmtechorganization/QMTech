@@ -1,0 +1,187 @@
+{
+  "header": {
+    "nav": {
+      "services": "Services",
+      "aboutUs": "About Us",
+      "faqs": "FAQs"
+    },
+    "callToAction": "Get A Quote"
+  },
+  "hero": {
+    "headline": "Tailored Tech Solutions for Your Success",
+    "subheadline": "From custom applications to efficient management systems, we support you at every step to ensure your technology meets your needs and drives your company's success.",
+    "callToAction": "Get A Free Consultation.",
+    "customSoftDev": "Custom Software Development",
+    "webDev": "Web Development",
+    "itTechSup": "IT Technical Support"
+  },
+  "services": {
+    "headline": "We shape the life of tomorrow",
+    "tagLine": "Our Services",
+    "getStarted": "Get Started",
+    "service": {
+      "softDev": {
+        "header": "Software Development",
+        "description": "Custom applications designed to meet your specific business needs. Whether it's a mobile app, desktop app, or both, we deliver tailored solutions to drive your success"
+      },
+      "webDev": {
+        "header": "Web Development",
+        "description": "Crafting responsive and high-performance websites tailored to your business needs. From concept to deployment, our expert developers deliver seamless user experiences. "
+      },
+      "micro365": {
+        "header": "Microsoft 365",
+        "description": "Simplify your Microsoft 365 licensing with our expert guidance. We help you choose the right plans, manage subscriptions, and ensure your organization maximizes its productivity tools."
+      },
+      "itTechSup": {
+        "header": "IT Tech Support",
+        "description": "Comprehensive technical assistance tailored to your IT needs. From troubleshooting to system optimization, our experts ensure your technology runs smoothly and efficiently."
+      },
+      "webHosting": {
+        "header": "Web Hosting",
+        "description": "Secure and scalable web hosting services designed for performance and reliability. We offer a range of hosting solutions to ensure your website is always online and fast."
+      },
+      "qualitySSoftware": {
+        "header": "Quality and Safety Software",
+        "description": "Innovative software solutions designed to uphold and enhance quality and safety standards in your operations. Ensure compliance and operational excellence with our expert systems."
+      }
+    }
+  },
+  "webHosting": {
+    "header": "Web Hosting Made Simple",
+    "tagline": "Reliable, Fast, and Secure",
+    "subheader": "Streamline your web hosting experience with our straightforward, reliable, and secure plans.",
+    "protected": "Protected by",
+    "getStarted": "Get Started Now",
+    "starterPack": {
+      "title": "Starter Pack",
+      "subtitle": "Best for Individuals",
+      "perks": {
+        "websites": "5 Websites",
+        "email": "10 email accounts with 1GB per account with customer support",
+        "ssl": "Unlimited free SSL",
+        "bandwith": "Unlimited bandwidth",
+        "migration": "Free Website Migration",
+        "ddosProtection": "Standard DDoS Protection",
+        "firewall": "Web Apps Firewall",
+        "nameservers": "Nameservers protected by Cloudflare",
+        "scanner": "Malware Scanner"
+      }
+    },
+    "smallBusiness": {
+      "title": "Small Business",
+      "subtitle": "Best for Startups",
+      "perks": {
+        "websites": "10 Websites",
+        "email": "25 email accounts with 1GB per account with customer support",
+        "ssl": "Unlimited free SSL",
+        "bandwith": "Unlimited bandwidth",
+        "migration": "Free Website Migration",
+        "ddosProtection": "Standard DDoS Protection",
+        "firewall": "Web Apps Firewall",
+        "nameservers": "Nameservers protected by Cloudflare",
+        "scanner": "Malware Scanner"
+      }
+    }
+  },
+  "aboutUs": {
+    "tagLine": "We are QM Tech",
+    "headline": "About Us",
+    "content": {
+      "part1": "Quality is our top priority at our company. We pride ourselves on delivering technological solutions and services that exceed our customers'expectations. With a highly trained team and an unwavering dedication to excellence.",
+      "part2": "We strive to ensure that every project we undertake meets the highest standards of quality in terms of performance, functionality, and reliability. From software development to customer service, every aspect of our business reflects our commitment to excellence and customer satisfaction."
+    }
+  },
+  "clients": {
+    "content": "With years of experience in custom software development, we have worked with a wide range of industries and have the necessary expertise to deliver effective and scalable solutions.",
+    "projects": "Projects completed",
+    "satisfaction": "Client satisfaction"
+  },
+  "howWeWork": {
+    "headline": "Get started with 3 steps",
+    "subheadline": "It is easy to start a project with us",
+    "step1": {
+      "heading": "Bring the Idea",
+      "description": "Share your tech challenge or vision with us, and we’ll craft a roadmap to achieve it."
+    },
+    "step2": {
+      "heading": "We Analyze",
+      "description": "Our experts dive deep into your requirements, analyzing every aspect to ensure the best solution."
+    },
+    "step3": {
+      "heading": "You Decide, We Execute",
+      "description": "Once you approve the plan, our team delivers precise execution, turning your vision into reality."
+    }
+  },
+  "quote": {
+    "heading": "Get a Free Quote",
+    "description": "Our team of expert software developers is here to help you achieve your business goals by providing tailored solutions perfectly suited to your requirements.",
+    "form": {
+      "name": {
+        "label": "Your Name",
+        "placeholder": "Name"
+      },
+      "email": {
+        "label": "Email",
+        "placeholder": "example@email.com"
+      },
+      "service": {
+        "label": "Servicio",
+        "options": {
+          "selectOption":"Select an Option",
+          "softDev": "Sofware Development",
+          "webDev": "Web Development",
+          "micro365": "Microsoft 365",
+          "itTechSup": "IT Technical Support",
+          "webHosting": "Web Hosting",
+          "qualitySSoftware": "Quality Safety Software",
+          "generalInquiry":"General Inquiries"
+        }
+      },
+      "message": {
+        "label": "Message",
+        "placeholder": " Write your message"
+      },
+      "submit": "Send"
+    }
+  },
+  "faq": {
+    "headline": "FAQs",
+    "faqs": {
+      "faq1": {
+        "title": "What makes your hosting services stand out?",
+        "content": "Our hosting services are designed to be scalable, secure, and reliable, ensuring your website is always accessible and performs optimally."
+      },
+      "faq2": {
+        "title": "Can you develop custom software for my business?",
+        "content": "Yes, we specialize in custom software development tailored to meet your specific business needs. Whether you need a web application, mobile app, or complex enterprise software, our team of developers is here to help."
+      },
+      "faq3": {
+        "title": "How do I purchase Microsoft 365 licenses through your service?",
+        "content": "We offer Microsoft 365 licensing with flexible plans to suit your business requirements. Our team can assist you in selecting the right plan, managing licenses, and ensuring seamless integration with your existing IT infrastructure."
+      },
+      "faq4": {
+        "title": "What kind of IT tech support do you provide?",
+        "content": "Our tech support services include remote assistance, troubleshooting, and maintenance. We ensure that your IT systems run smoothly with minimal downtime, providing prompt and efficient solutions to any technical issues."
+      },
+      "faq5": {
+        "title": "What is Quality & Safety Software?",
+        "content": "Quality & Safety Software is designed to help businesses manage compliance, track safety metrics, and ensure quality standards are met across all operations. It is customizable to fit the unique needs of your industry."
+      },
+      "faq6": {
+        "title": "How can I get started with your services?",
+        "content": "Getting started is easy! Simply contact us through our website or give us a call. We will discuss your needs, provide a quote, and create a tailored plan to ensure your business benefits from our expertise."
+      },
+      "faq7": {
+        "title": "Do you offer ongoing maintenance and updates for the software you develop?",
+        "content": "Yes, we provide ongoing maintenance and updates for all software we develop. Our support ensures that your software remains up-to-date, secure, and performs optimally as your business evolves."
+      },
+      "faq8": {
+        "title": "What industries do you specialize in?",
+        "content": "We have experience working with a variety of industries, including healthcare, finance, manufacturing, and retail. Our team understands the unique challenges of each sector and tailors our solutions to meet those specific needs."
+      }
+    }
+  },
+  "footer": {
+    "copy": "Tech Quality Matters © 2024. All Rights Reserved."
+  }
+}

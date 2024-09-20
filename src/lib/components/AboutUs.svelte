@@ -1,3 +1,6 @@
+<script>
+  import { _ } from "svelte-i18n";
+</script>
 
 <section id="about-us" class="pt-40 pb-10 md:pb-32 px-8 md:px-24 container flex flex-col-reverse md:flex-col mx-auto px-4">
     <div class="flex flex-wrap -m-4 md:mb-16">
@@ -10,19 +13,19 @@
     </div>
     <div class="flex flex-wrap -m-4">
       <div class="w-full lg:w-1/3 p-4">
-        <p class="tracking-tight mb-4">We are QM Tech</p>
-        <h1 class="tracking-tight font-heading text-4xl md:text-6xl font-medium">About Us</h1>
+        <p class="tracking-tight mb-4">{$_('aboutUs.tagLine')}</p>
+        <h1 class="tracking-tight font-heading text-4xl md:text-6xl font-medium">{$_('aboutUs.headline')}</h1>
       </div>
       <div class="w-full lg:w-2/3 p-4">
         <div class="flex flex-wrap -m-4">
           <div class="w-full lg:w-1/2 p-4">
             <div class="pt-6 border-t border-black">
-              <p class="text-lg">Quality is our top priority at our company. We pride ourselves on delivering technological solutions and services that exceed our customers'expectations. With a highly trained team and an unwavering dedication to excellence.</p>
+              <p class="text-lg">{$_('aboutUs.content.part1')}</p>
             </div>
           </div>
           <div class="w-full lg:w-1/2 p-4">
             <div class="pt-6 border-t border-black">
-              <p class="text-lg">We strive to ensure that every project we undertake meets the highest standards of quality in terms of performance, functionality, and reliability. From software development to customer service, every aspect of our business reflects our commitment to excellence and customer satisfaction.</p>
+              <p class="text-lg">{$_('aboutUs.content.part2')}</p>
             </div>
           </div>
         </div>
