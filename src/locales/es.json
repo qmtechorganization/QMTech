@@ -1,0 +1,186 @@
+{
+    "header": {
+      "nav": {
+        "services": "Servicios",
+        "aboutUs": "Sobre Nosotros",
+        "faqs": "Preguntas Frecuentes"
+      },
+      "callToAction": "Cotizar"
+    },
+    "hero": {
+      "headline": "Soluciones Personalizadas de Tecnología para el Éxito de Tu Negocio",
+      "subheadline": "Desde aplicaciones personalizadas hasta sistemas de gestión eficientes, te apoyamos en cada paso para garantizar que tu tecnología satisfaga tus necesidades e impulse el éxito de tu empresa.",
+      "callToAction": "Obtén una consulta gratuita.",
+      "customSoftDev": "Desarrollo de Software Personalizado",
+      "webDev": "Desarrollo Web",
+      "itTechSup": "Soporte Técnico de TI"
+    },
+    "services": {
+      "headline": "Damos Forma a la Vida del Mañana",
+      "tagLine": "Nuestros Servicios",
+      "getStarted": "Comenzar",
+      "service": {
+        "softDev": {
+          "header": "Desarrollo de Software",
+          "description": "Aplicaciones personalizadas diseñadas para satisfacer las necesidades específicas de tu negocio. Ya sea una aplicación móvil, de escritorio o ambas, ofrecemos soluciones a medida para impulsar tu éxito."
+        },
+        "webDev": {
+          "header": "Desarrollo Web",
+          "description": "Creación de sitios web receptivos y de alto rendimiento, adaptados a las necesidades de tu negocio. Desde el concepto hasta el despliegue, nuestros desarrolladores expertos entregan experiencias de usuario sin interrupciones."
+        },
+        "micro365": {
+          "header": "Microsoft 365",
+          "description": "Simplifica tu licencia de Microsoft 365 con nuestra orientación experta. Te ayudamos a elegir los planes correctos, gestionar suscripciones y garantizar que tu organización maximice sus herramientas de productividad."
+        },
+        "itTechSup": {
+          "header": "Soporte Técnico de TI",
+          "description": "Asistencia técnica integral adaptada a tus necesidades de TI. Desde la resolución de problemas hasta la optimización de sistemas, nuestros expertos aseguran que tu tecnología funcione de manera fluida y eficiente."
+        },
+        "webHosting": {
+          "header": "Alojamiento Web",
+          "description": "Servicios de alojamiento web seguros y escalables, diseñados para rendimiento y fiabilidad. Ofrecemos una variedad de soluciones de alojamiento para asegurar que tu sitio web esté siempre en línea y rápido."
+        },
+        "qualitySSoftware": {
+          "header": "Software de Calidad y Seguridad",
+          "description": "Soluciones de software innovadoras diseñadas para mantener y mejorar los estándares de calidad y seguridad en tus operaciones. Asegura el cumplimiento y la excelencia operativa con nuestros sistemas expertos."
+        }
+      }
+    },
+    "webHosting": {
+      "header": "Alojamiento Web Hecho Simple",
+      "tagline": "Confiable, Rápido y Seguro",
+      "subheader": "Simplifica tu experiencia de alojamiento web con nuestros planes sencillos, confiables y seguros.",
+      "protected": "Protegido por",
+      "getStarted": "Comienza Ahora",
+      "starterPack": {
+        "title": "Paquete Inicial",
+        "subtitle": "Ideal para Individuos",
+        "perks": {
+          "websites": "5 Sitios Web",
+          "email": "10 cuentas de correo con 1GB por cuenta y soporte al cliente",
+          "ssl": "SSL ilimitado gratuito",
+          "bandwith": "Ancho de banda ilimitado",
+          "migration": "Migración de sitio web gratuita",
+          "ddosProtection": "Protección DDoS estándar",
+          "firewall": "Firewall para aplicaciones web",
+          "nameservers": "Servidores de nombres protegidos por Cloudflare",
+          "scanner": "Escáner de malware"
+        }
+      },
+      "smallBusiness": {
+        "title": "Pequeña Empresa",
+        "subtitle": "Ideal para Startups",
+        "perks": {
+          "websites": "10 Sitios Web",
+          "email": "25 cuentas de correo con 1GB por cuenta y soporte al cliente",
+          "ssl": "SSL ilimitado gratuito",
+          "bandwith": "Ancho de banda ilimitado",
+          "migration": "Migración de sitio web gratuita",
+          "ddosProtection": "Protección DDoS estándar",
+          "firewall": "Firewall para aplicaciones web",
+          "nameservers": "Servidores de nombres protegidos por Cloudflare",
+          "scanner": "Escáner de malware"
+        }
+      }
+    },
+    "aboutUs": {
+      "tagLine": "Somos QM Tech",
+      "headline": "Sobre Nosotros",
+      "content": {
+        "part1": "La calidad es nuestra principal prioridad en nuestra empresa. Nos enorgullecemos de ofrecer soluciones y servicios tecnológicos que superan las expectativas de nuestros clientes. Con un equipo altamente capacitado y una inquebrantable dedicación a la excelencia.",
+        "part2": "Nos esforzamos por garantizar que cada proyecto que emprendemos cumpla con los más altos estándares de calidad en términos de rendimiento, funcionalidad y confiabilidad. Desde el desarrollo de software hasta el servicio al cliente, cada aspecto de nuestro negocio refleja nuestro compromiso con la excelencia y la satisfacción del cliente."
+      }
+    },
+    "clients": {
+      "content": "Con años de experiencia en el desarrollo de software, hemos trabajado con una amplia gama de industrias y tenemos la experiencia necesaria para ofrecer soluciones efectivas y escalables.",
+      "projects": "Proyectos Completados",
+      "satisfaction": "Satisfacción del Cliente"
+    },
+    "howWeWork": {
+      "headline": "Nuestro Proceso en 3 Pasos",
+      "subheadline": "Es fácil comenzar un proyecto con nosotros",
+      "step1": {
+        "heading": "Trae la Idea",
+        "description": "Comparte tu desafío tecnológico o visión con nosotros, y crearemos una hoja de ruta para lograrlo."
+      },
+      "step2": {
+        "heading": "Analizamos",
+        "description": "Nuestros expertos se sumergen profundamente en tus requisitos, analizando cada aspecto para asegurar la mejor solución."
+      },
+      "step3": {
+        "heading": "Tú Decides, Nosotros Ejecutamos",
+        "description": "Una vez que apruebes el plan, nuestro equipo ejecuta con precisión, convirtiendo tu visión en realidad."
+      }
+    },
+    "quote": {
+      "heading": "Obtén una Cotización Gratuita",
+      "description": "Nuestro equipo de desarrolladores de software expertos está aquí para ayudarte a alcanzar tus objetivos empresariales proporcionando soluciones a medida perfectamente adaptadas a tus requerimientos.",
+      "form": {
+        "name": {
+          "label": "Tu Nombre",
+          "placeholder": "Nombre"
+        },
+        "email": {
+          "label": "Correo Electrónico",
+          "placeholder": "ejemplo@correo.com"
+        },
+        "service": {
+          "label": "Servicio",
+          "options": {
+            "softDev": "Desarrollo de Software",
+            "webDev": "Desarrollo Web",
+            "micro365": "Microsoft 365",
+            "itTechSup": "Soporte Técnico de TI",
+            "webHosting": "Alojamiento Web",
+            "qualitySSoftware": "Software de Calidad y Seguridad"
+          }
+        },
+        "message": {
+          "label": "Mensaje",
+          "placeholder": "Escribe tu mensaje",
+          "submit": "Enviar"
+        }
+      }
+    },
+    "faq": {
+      "headline": "Preguntas Frecuentes",
+      "faqs": {
+        "faq1": {
+          "title": "¿Qué planes de alojamiento web ofrecen?",
+          "content": "Ofrecemos una variedad de planes de alojamiento web, incluidos alojamiento compartido, VPS y dedicado. Nuestros servicios de alojamiento están diseñados para ser escalables, seguros y confiables, garantizando que tu sitio web esté siempre accesible y funcione de manera óptima."
+        },
+        "faq2": {
+          "title": "¿Pueden desarrollar software personalizado para mi negocio?",
+          "content": "Sí, nos especializamos en el desarrollo de software personalizado adaptado a satisfacer tus necesidades comerciales específicas. Ya sea que necesites una aplicación web, una aplicación móvil o software empresarial complejo, nuestro equipo de desarrolladores está aquí para ayudarte."
+        },
+        "faq3": {
+          "title": "¿Cómo compro licencias de Microsoft 365 a través de su servicio?",
+          "content": "Ofrecemos licencias de Microsoft 365 con planes flexibles que se adaptan a los requisitos de tu negocio. Nuestro equipo puede ayudarte a seleccionar el plan adecuado, administrar licencias y garantizar una integración perfecta con tu infraestructura de TI existente."
+        },
+        "faq4": {
+          "title": "¿Qué tipo de soporte técnico brindan?",
+          "content": "Nuestros servicios de soporte técnico incluyen asistencia remota 24/7, soporte en el lugar, resolución de problemas y mantenimiento. Nos aseguramos de que tus sistemas de TI funcionen sin problemas con un tiempo de inactividad mínimo, brindando soluciones rápidas y eficientes a cualquier problema técnico."
+        },
+        "faq5": {
+          "title": "¿Qué es el Software de Calidad y Seguridad?",
+          "content": "El Software de Calidad y Seguridad está diseñado para ayudar a las empresas a gestionar la conformidad, realizar un seguimiento de las métricas de seguridad y garantizar el cumplimiento de las normas de calidad en todas las operaciones. Se puede personalizar para adaptarse a las necesidades específicas de tu sector."
+        },
+        "faq6": {
+          "title": "¿Cómo puedo comenzar con sus servicios?",
+          "content": "¡Empezar es fácil! Simplemente contáctanos a través de nuestro sitio web o llámanos. Analizaremos tus necesidades, te proporcionaremos una cotización y crearemos un plan personalizado para garantizar que tu negocio se beneficie de nuestra experiencia."
+        },
+        "faq7": {
+          "title": "¿Ofrecen mantenimiento y actualizaciones continuas para el software que desarrollan?",
+          "content": "Sí, brindamos mantenimiento y actualizaciones continuas para todo el software que desarrollamos. Nuestro soporte garantiza que tu software permanezca actualizado, sea seguro y funcione de manera óptima a medida que tu negocio evoluciona."
+        },
+        "faq8": {
+          "title": "¿En qué industrias se especializan?",
+          "content": "Tenemos experiencia trabajando con una variedad de industrias, incluidas la atención médica, las finanzas, la manufactura y el comercio minorista. Nuestro equipo comprende los desafíos únicos de cada sector y adapta nuestras soluciones para satisfacer esas necesidades específicas."
+        }
+      }
+    },
+    "footer": {
+      "copy": "Tech Quality Matters © 2024. Todos los Derechos Reservados."
+    }
+  }
+  

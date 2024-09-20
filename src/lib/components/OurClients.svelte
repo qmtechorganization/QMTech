@@ -1,15 +1,11 @@
 <script lang="ts">
     import { clientStore } from '$lib/stores/collentionsStore';
+    import { _ } from "svelte-i18n";
     
     let clients = [];
     
     $: clients = $clientStore;
-    
-    
-    //$: {
-      //  console.log('Clients in OurClients.svelte:', clients);
-    //}
-//flex-shrink-0
+      
 </script>
 
 <section class="px-8 md:px-24 lg:py-10 content-center container mx-auto">
@@ -21,7 +17,7 @@
             <div class="row g-0 mx-lg-0">
               <div class="col-lg-6 feature-text py-5 wow fadeIn" data-wow-delay="0.5s">
                 <div class="p-lg-5 ps-lg-0">
-                  <p class="mb-4 pb-2 text-3xl text-center md:text-left">With years of experience in custom software development, we have worked with a wide range of industries and have the necessary expertise to deliver effective and scalable solutions.</p>
+                  <p class="mb-4 pb-2 text-3xl text-center md:text-left">{$_('clients.content')}</p>
                 </div>
               </div>
             </div>
@@ -40,13 +36,13 @@
         <div class="w-full  p-4">
           <div class="bg-transparent border-2 rounded-2xl py-8">
             <h2 class="font-heading tracking-tight text-6xl font-medium text-center mb-1">{clients.length}</h2>
-            <p class="tracking-tight text-body text-center">Projects completed</p>
+            <p class="tracking-tight text-body text-center">{$_('clients.projects')}</p>
           </div>
         </div>
       </div>
       <div class="bg-transparent border rounded-2xl py-8">
         <h2 class="font-heading tracking-tight text-6xl font-medium text-center mb-1">100%</h2>
-        <p class="tracking-tight text-body text-center">Client satisfaction</p>
+        <p class="tracking-tight text-body text-center">{$_('clients.satisfaction')}</p>
       </div>
     </div>
   </div>

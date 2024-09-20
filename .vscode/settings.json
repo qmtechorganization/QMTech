@@ -1,0 +1,8 @@
+{
+    "i18n-ally.localesPaths": [
+        "src/lib/locale",
+        "src/lib/locale/lang",
+        "../../../../../Users/Kusanagi/source/QMTech/src/locales"
+    ],
+    "i18n-ally.keystyle": "nested"
+}

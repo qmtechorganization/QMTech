@@ -1,30 +1,32 @@
 <script>
+      import { _ } from "svelte-i18n";
+
     // Define any properties or data here if needed
     export let steps = [
         {
       number: '01',
-      title: 'Bring the Idea',
-      description: 'Share your tech challenge or vision with us, and we’ll craft a roadmap to achieve it.',
+      title: $_('howWeWork.step1.heading'),
+      description: $_('howWeWork.step1.description'),
       image: '/images/howWeWork/analyze-the-idea.jpg'
     },
     {
       number: '02',
-      title: 'We Analyze',
-      description: 'Our experts dive deep into your requirements, analyzing every aspect to ensure the best solution.',
+      title: $_('howWeWork.step2.heading'),
+      description: $_('howWeWork.step2.description'),
       image: '/images/howWeWork/bring-the-idea.jpg'
     },
     {
       number: '03',
-      title: 'You Decide, We Execute',
-      description: 'Once you approve the plan, our team delivers precise execution, turning your vision into reality.',
+      title: $_('howWeWork.step3.heading'),
+      description: $_('howWeWork.step3.description'),
       image: '/images/howWeWork/decide-execute.jpg'
     }
     ];
   </script>
   
   <section class="px-8 md:px-24 pt-32 pb-20 container mx-auto">
-    <h1 class="font-heading tracking-tight text-4xl md:text-6xl font-medium text-center mb-4">Get started with 3 steps</h1>
-    <p class="tracking-tight text-center text-gray-300 text-lg mb-20">It is easy to start a project with us</p>
+    <h1 class="font-heading tracking-tight text-4xl md:text-6xl font-medium text-center mb-4">{$_('howWeWork.headline')}</h1>
+    <p class="tracking-tight text-center text-gray-300 text-lg mb-20">{$_('howWeWork.subheadline')}</p>
     <div class="flex flex-wrap -m-4">
       {#each steps as { number, title, description, image }}
         <div class="w-full lg:w-1/3 p-4">

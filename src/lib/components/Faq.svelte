@@ -1,53 +1,54 @@
 <script>
+  import { _ } from "svelte-i18n";
     let accordions = [
   {
-    "title": "What web hosting plans do you offer?",
-    "content": "We provide a range of web hosting plans, including shared, VPS, and dedicated hosting. Our hosting services are designed to be scalable, secure, and reliable, ensuring your website is always accessible and performs optimally.",
+    "title": $_('faq.faqs.faq1.title'),
+    "content": $_('faq.faqs.faq1.content'),
     "open": false
   },
   {
-    "title": "Can you develop custom software for my business?",
-    "content": "Yes, we specialize in custom software development tailored to meet your specific business needs. Whether you need a web application, mobile app, or complex enterprise software, our team of developers is here to help.",
+    "title": $_('faq.faqs.faq2.title'),
+    "content": $_('faq.faqs.faq2.content'),
     "open": false
   },
   {
-    "title": "How do I purchase Microsoft 365 licenses through your service?",
-    "content": "We offer Microsoft 365 licensing with flexible plans to suit your business requirements. Our team can assist you in selecting the right plan, managing licenses, and ensuring seamless integration with your existing IT infrastructure.",
+    "title": $_('faq.faqs.faq3.title'),
+    "content": $_('faq.faqs.faq3.content'),
     "open": false
   },
   {
-    "title": "What kind of tech support do you provide?",
-    "content": "Our tech support services include 24/7 remote assistance, on-site support, troubleshooting, and maintenance. We ensure that your IT systems run smoothly with minimal downtime, providing prompt and efficient solutions to any technical issues.",
+    "title": $_('faq.faqs.faq4.title'),
+    "content": $_('faq.faqs.faq4.content'),
     "open": false
   },
   {
-    "title": "What is your Quality & Safety Software?",
-    "content": "Our Quality & Safety Software is designed to help businesses manage compliance, track safety metrics, and ensure quality standards are met across all operations. It is customizable to fit the unique needs of your industry.",
+    "title": $_('faq.faqs.faq5.title'),
+    "content": $_('faq.faqs.faq5.content'),
     "open": false
   },
   {
-    "title": "How can I get started with your services?",
-    "content": "Getting started is easy! Simply contact us through our website or give us a call. We will discuss your needs, provide a quote, and create a tailored plan to ensure your business benefits from our expertise.",
+    "title": $_('faq.faqs.faq6.title'),
+    "content": $_('faq.faqs.faq6.content'),
     "open": false
   },
   {
-    "title": "Do you offer ongoing maintenance and updates for the software you develop?",
-    "content": "Yes, we provide ongoing maintenance and updates for all software we develop. Our support ensures that your software remains up-to-date, secure, and performs optimally as your business evolves.",
+    "title": $_('faq.faqs.faq7.title'),
+    "content": $_('faq.faqs.faq7.content'),
     "open": false
   },
   {
-    "title": "What industries do you specialize in?",
-    "content": "We have experience working with a variety of industries, including healthcare, finance, manufacturing, and retail. Our team understands the unique challenges of each sector and tailors our solutions to meet those specific needs.",
+    "title": $_('faq.faqs.faq8.title'),
+    "content": $_('faq.faqs.faq8.content'),
     "open": false
   },
   {
-    "title": "Can I upgrade my service plan as my business grows?",
-    "content": "Absolutely. Our services are designed to scale with your business. Whether you need more storage, additional features, or higher-tier support, we offer flexible upgrade options to accommodate your growth.",
+    "title": $_('faq.faqs.faq7.title'),
+    "content": $_('faq.faqs.faq7.content'),
     "open": false
   },
   {
-    "title": "How secure are your hosting and software solutions?",
-    "content": "Security is our top priority. Our hosting services include robust security measures such as firewalls, SSL certificates, and regular security audits. Our software solutions are developed with best practices in cybersecurity to protect your data and systems.",
+    "title": $_('faq.faqs.faq8.title'),
+    "content": $_('faq.faqs.faq8.title'),
     "open": false
   }
 ]
