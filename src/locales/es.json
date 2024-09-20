@@ -2,7 +2,7 @@
     "header": {
       "nav": {
         "services": "Servicios",
-        "aboutUs": "Sobre Nosotros",
+        "aboutUs": "Nosotros",
         "faqs": "Preguntas Frecuentes"
       },
       "callToAction": "Cotizar"
@@ -16,9 +16,9 @@
       "itTechSup": "Soporte Técnico de TI"
     },
     "services": {
-      "headline": "Damos Forma a la Vida del Mañana",
+      "headline": "Damos Forma al Mañana",
       "tagLine": "Nuestros Servicios",
-      "getStarted": "Comenzar",
+      "getStarted": "Cotizar",
       "service": {
         "softDev": {
           "header": "Desarrollo de Software",
@@ -51,7 +51,7 @@
       "tagline": "Confiable, Rápido y Seguro",
       "subheader": "Simplifica tu experiencia de alojamiento web con nuestros planes sencillos, confiables y seguros.",
       "protected": "Protegido por",
-      "getStarted": "Comienza Ahora",
+      "getStarted": "Cotizar",
       "starterPack": {
         "title": "Paquete Inicial",
         "subtitle": "Ideal para Individuos",
@@ -85,7 +85,7 @@
     },
     "aboutUs": {
       "tagLine": "Somos QM Tech",
-      "headline": "Sobre Nosotros",
+      "headline": "Nosotros",
       "content": {
         "part1": "La calidad es nuestra principal prioridad en nuestra empresa. Nos enorgullecemos de ofrecer soluciones y servicios tecnológicos que superan las expectativas de nuestros clientes. Con un equipo altamente capacitado y una inquebrantable dedicación a la excelencia.",
         "part2": "Nos esforzamos por garantizar que cada proyecto que emprendemos cumpla con los más altos estándares de calidad en términos de rendimiento, funcionalidad y confiabilidad. Desde el desarrollo de software hasta el servicio al cliente, cada aspecto de nuestro negocio refleja nuestro compromiso con la excelencia y la satisfacción del cliente."
@@ -113,7 +113,7 @@
       }
     },
     "quote": {
-      "heading": "Obtén una Cotización Gratuita",
+      "heading": "Solicita una Cotización",
       "description": "Nuestro equipo de desarrolladores de software expertos está aquí para ayudarte a alcanzar tus objetivos empresariales proporcionando soluciones a medida perfectamente adaptadas a tus requerimientos.",
       "form": {
         "name": {
@@ -127,27 +127,30 @@
         "service": {
           "label": "Servicio",
           "options": {
+            "selectOption":"Secciona una opción",
             "softDev": "Desarrollo de Software",
             "webDev": "Desarrollo Web",
             "micro365": "Microsoft 365",
             "itTechSup": "Soporte Técnico de TI",
             "webHosting": "Alojamiento Web",
-            "qualitySSoftware": "Software de Calidad y Seguridad"
+            "qualitySSoftware": "Software de Calidad y Seguridad",
+            "generalInquiry":"Consultas Generales"
           }
         },
         "message": {
           "label": "Mensaje",
-          "placeholder": "Escribe tu mensaje",
-          "submit": "Enviar"
-        }
+          "placeholder": "Escribe tu mensaje"
+        },
+        "submit": "Enviar"
+
       }
     },
     "faq": {
       "headline": "Preguntas Frecuentes",
       "faqs": {
         "faq1": {
-          "title": "¿Qué planes de alojamiento web ofrecen?",
-          "content": "Ofrecemos una variedad de planes de alojamiento web, incluidos alojamiento compartido, VPS y dedicado. Nuestros servicios de alojamiento están diseñados para ser escalables, seguros y confiables, garantizando que tu sitio web esté siempre accesible y funcione de manera óptima."
+          "title": "¿Qué hace que sus servicios de hosting se destaquen?",
+          "content": "Nuestros servicios de alojamiento están diseñados para ser escalables, seguros y confiables, garantizando que tu sitio web esté siempre accesible y funcione de manera óptima."
         },
         "faq2": {
           "title": "¿Pueden desarrollar software personalizado para mi negocio?",
@@ -158,8 +161,8 @@
           "content": "Ofrecemos licencias de Microsoft 365 con planes flexibles que se adaptan a los requisitos de tu negocio. Nuestro equipo puede ayudarte a seleccionar el plan adecuado, administrar licencias y garantizar una integración perfecta con tu infraestructura de TI existente."
         },
         "faq4": {
-          "title": "¿Qué tipo de soporte técnico brindan?",
-          "content": "Nuestros servicios de soporte técnico incluyen asistencia remota 24/7, soporte en el lugar, resolución de problemas y mantenimiento. Nos aseguramos de que tus sistemas de TI funcionen sin problemas con un tiempo de inactividad mínimo, brindando soluciones rápidas y eficientes a cualquier problema técnico."
+          "title": "¿Qué tipo de soporte TI brindan?",
+          "content": "Nuestros servicios de soporte técnico incluyen asistencia remota, resolución de problemas y mantenimiento. Nos aseguramos de que tus sistemas de TI funcionen sin problemas con un tiempo de inactividad mínimo, brindando soluciones rápidas y eficientes a cualquier problema técnico."
         },
         "faq5": {
           "title": "¿Qué es el Software de Calidad y Seguridad?",

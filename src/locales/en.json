@@ -127,27 +127,29 @@
       "service": {
         "label": "Servicio",
         "options": {
+          "selectOption":"Select an Option",
           "softDev": "Sofware Development",
           "webDev": "Web Development",
           "micro365": "Microsoft 365",
           "itTechSup": "IT Technical Support",
           "webHosting": "Web Hosting",
-          "qualitySSoftware": "Quality Safety Software"
+          "qualitySSoftware": "Quality Safety Software",
+          "generalInquiry":"General Inquiries"
         }
       },
       "message": {
         "label": "Message",
-        "placeholder": " Write your message",
-        "submit": "Send"
-      }
+        "placeholder": " Write your message"
+      },
+      "submit": "Send"
     }
   },
   "faq": {
     "headline": "FAQs",
     "faqs": {
       "faq1": {
-        "title": "What web hosting plans do you offer?",
-        "content": "We provide a range of web hosting plans, including shared, VPS, and dedicated hosting. Our hosting services are designed to be scalable, secure, and reliable, ensuring your website is always accessible and performs optimally."
+        "title": "What makes your hosting services stand out?",
+        "content": "Our hosting services are designed to be scalable, secure, and reliable, ensuring your website is always accessible and performs optimally."
       },
       "faq2": {
         "title": "Can you develop custom software for my business?",
@@ -158,8 +160,8 @@
         "content": "We offer Microsoft 365 licensing with flexible plans to suit your business requirements. Our team can assist you in selecting the right plan, managing licenses, and ensuring seamless integration with your existing IT infrastructure."
       },
       "faq4": {
-        "title": "What kind of tech support do you provide?",
-        "content": "Our tech support services include 24/7 remote assistance, on-site support, troubleshooting, and maintenance. We ensure that your IT systems run smoothly with minimal downtime, providing prompt and efficient solutions to any technical issues."
+        "title": "What kind of IT tech support do you provide?",
+        "content": "Our tech support services include remote assistance, troubleshooting, and maintenance. We ensure that your IT systems run smoothly with minimal downtime, providing prompt and efficient solutions to any technical issues."
       },
       "faq5": {
         "title": "What is Quality & Safety Software?",

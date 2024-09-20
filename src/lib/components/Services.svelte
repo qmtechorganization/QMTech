@@ -11,8 +11,8 @@
 
   <section id="services" class="pt-32 px-8 md:px-24 pb-20 container mx-auto">
     <div class="">
-      <p class="tracking-tight text-center">{$_('services.tagLine')}</p>
-      <h1 class="mb-14 tracking-tight font-heading text-4xl md:text-6xl text-center font-medium mb-18">{$_('services.headline')}</h1>
+      <p class="tracking-tight text-center mb-4">{$_('services.tagLine')}</p>
+      <h1 class="mb-8 tracking-tight font-heading text-4xl md:text-6xl text-center font-medium ">{$_('services.headline')}</h1>
       <div class="flex flex-wrap">
         {#each services as service}
         <div class="w-full lg:w-1/3 py-4">

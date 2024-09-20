@@ -5,20 +5,20 @@
     export let steps = [
         {
       number: '01',
-      title: $_('howWeWork.step1.heading'),
-      description: $_('howWeWork.step1.description'),
+      title: 'howWeWork.step1.heading',
+      description: 'howWeWork.step1.description',
       image: '/images/howWeWork/analyze-the-idea.jpg'
     },
     {
       number: '02',
-      title: $_('howWeWork.step2.heading'),
-      description: $_('howWeWork.step2.description'),
+      title: 'howWeWork.step2.heading',
+      description: 'howWeWork.step2.description',
       image: '/images/howWeWork/bring-the-idea.jpg'
     },
     {
       number: '03',
-      title: $_('howWeWork.step3.heading'),
-      description: $_('howWeWork.step3.description'),
+      title: 'howWeWork.step3.heading',
+      description: 'howWeWork.step3.description',
       image: '/images/howWeWork/decide-execute.jpg'
     }
     ];
@@ -38,8 +38,8 @@
               </div>
             </div>
             <div class="absolute bottom-8 left-9 right-9 bg-body bg-opacity-60 p-3">
-              <p class="tracking-tight text-white text-2xl font-semibold mb-2">{title}</p>
-              <p class="tracking-tight text-white text-opacity-80 max-w-xs">{description}</p>
+              <p class="tracking-tight text-white text-2xl font-semibold mb-2">{$_(title)}</p>
+              <p class="tracking-tight text-white text-opacity-80 max-w-xs">{$_(description)}</p>
             </div>
           </div>
         </div>
