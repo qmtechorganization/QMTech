@@ -18,6 +18,7 @@
     if (browser) {
       localStorage.setItem('selectedLanguage', lang);
     }
+mobileNavOpen = false;
   };
 </script>
 
