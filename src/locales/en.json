@@ -42,7 +42,7 @@
       },
       "qualitySSoftware": {
         "header": "Quality and Safety Software",
-        "description": "Innovative software solutions designed to uphold and enhance quality and safety standards in your operations. Ensure compliance and operational excellence with our expert systems."
+        "description": "Innovative software solutions designed to uphold and enhance Quality (ISO 9001) & Safety (ISO 14001 & ISO 45001) standards in your operations. Ensure compliance and operational excellence with our expert systems."
       }
     }
   },
@@ -127,14 +127,14 @@
       "service": {
         "label": "Servicio",
         "options": {
-          "selectOption":"Select an Option",
+          "selectOption": "Select an Option",
           "softDev": "Sofware Development",
           "webDev": "Web Development",
           "micro365": "Microsoft 365",
           "itTechSup": "IT Technical Support",
           "webHosting": "Web Hosting",
           "qualitySSoftware": "Quality Safety Software",
-          "generalInquiry":"General Inquiries"
+          "generalInquiry": "General Inquiries"
         }
       },
       "message": {
