@@ -8,7 +8,7 @@
         <a href="#heroHome" class="inline-block">
           <p class="text-accent text-3xl">QM Tech</p>
         </a>        
-        <ul class="flex gap-5 flex-wrap text-">
+        <ul class="flex gap-5 flex-wrap justify-center text-center">
           
           <li><a href="/" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.home')}</a></li>
           <li><a href="/#services" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.services')}</a></li>
