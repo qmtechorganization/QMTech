@@ -29,10 +29,11 @@ mobileNavOpen = false;
         <a href="/" class="inline-block">
           <p class="w-64 text-accent text-3xl">QM Tech</p>
         </a>
-        <ul class="hidden lg:flex items-center gap-2">
-          <li><a href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.services')}</a></li>
-          <li><a href="#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.aboutUs')}</a></li>
-          <li><a href="#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.faqs')}</a></li>
+        <ul class="hidden lg:flex items-center text-2xl gap-2">
+          <li><a href="/" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.home')}</a></li>
+          <li><a href="/#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.services')}</a></li>
+          <li><a href="/#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.aboutUs')}</a></li>
+          <li><a href="/#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.faqs')}</a></li>
         </ul>
       </div>
 
@@ -78,9 +79,10 @@ mobileNavOpen = false;
 
       <!-- Mobile Menu Links -->
       <ul class="flex flex-col gap-8 py-12">
-        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.services')}</a></li>
-        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.aboutUs')}</a></li>
-        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.faqs')}</a></li>
+        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="/" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.services')}</a></li>
+        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="/#services" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.services')}</a></li>
+        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="/#about-us" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.aboutUs')}</a></li>
+        <li><a on:click={() => mobileNavOpen = !mobileNavOpen} href="/#faqs" class="nav-menu inline-block py-2 px-3 hover:bg-gray-900 transition duration-200 text-white text-md font-medium tracking-tight rounded-full">{$_('header.nav.faqs')}</a></li>
       </ul>
 
       <!-- Get A Quote Button for Mobile -->

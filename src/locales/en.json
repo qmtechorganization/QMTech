@@ -1,9 +1,11 @@
 {
   "header": {
     "nav": {
+      "home": "Home",
       "services": "Services",
       "aboutUs": "About Us",
-      "faqs": "FAQs"
+      "faqs": "FAQs",
+      "privacyPolicy": "Aviso de Privacidad"
     },
     "callToAction": "Get A Quote"
   },
@@ -141,6 +143,8 @@
         "label": "Message",
         "placeholder": " Write your message"
       },
+      "privacyPolicyNotice":"I accept the terms written in the Privacy Notice.",
+      "seePolicy":"Read Privacy Notice",
       "submit": "Send"
     }
   },
@@ -180,7 +184,66 @@
         "content": "We have experience working with a variety of industries, including healthcare, finance, manufacturing, and retail. Our team understands the unique challenges of each sector and tailors our solutions to meet those specific needs."
       }
     }
+    },
+    "privacyPolicy": 
+    {
+      "title": "Privacy Notice",
+      "companyName": "QM TECH",
+      "intro": "QM TECH, better known as QM TECH, with website www.tech.q-matters.com, is responsible for the use and protection of your personal data, and regarding this, we inform you of the following:",
+      "purposesTitle": "For what purposes will we use your personal data?",
+      "purposesPrimary": "The personal data we collect from you will be used for the following purposes that are necessary for the service you request:",
+      "primaryPurposes": {
+        "purpose1": "Response to contact form messages",
+        "purpose2": "Provision of any requested service",
+        "purpose3": "Deployment and maintenance of hosted applications and websites",
+        "purpose4": "Software development and project management",
+        "purpose5": "Technical support and customer service",
+        "purpose6": "Billing and payment processing"
+      },
+      "purposesSecondaryTitle": "Additionally, your personal information may be used for the following secondary purposes:",
+      "secondaryPurposes": {
+        "purpose1": "Notifications about service updates and maintenance",
+        "purpose2": "Marketing communications about new products or services",
+        "purpose3": "Customer satisfaction surveys"
+      },
+      "dataTitle": "What personal data will we use for these purposes?",
+      "dataCollected": {
+        "data1": "Identification and contact information",
+        "data2": "Billing information",
+        "data3": "Technical information related to your hosted services or software projects"
+      },
+      "rightsTitle": "How can you access, rectify or cancel your personal data, or oppose its use or exercise the revocation of consent?",
+      "rightsIntro": "You have the right to know what personal data we have about you, what we use it for, and the conditions of use we give it (Access). Likewise, it is your right to request the correction of your personal information if it is outdated, inaccurate or incomplete (Rectification); that we remove it from our records or databases when you consider that it is not being used properly (Cancellation); as well as oppose the use of your personal data for specific purposes (Opposition). These rights are known as ARCO rights.",
+      "rightsInstruction": "To exercise any of the ARCO rights, you must send a request via email to privacy@tech.qmatters.com and it must contain:",
+      "rightsSteps": {
+        "step1": "Full name of the holder",
+        "step2": "Email used on this website",
+        "step3": "Copy of an official identification attached",
+        "step4": "Subject 'ARCO Rights'",
+        "step5": "Description of the object of the letter, which may be, but is not limited to the following:"
+      },
+      "revocationRequests": {
+        "request1": "Revocation of consent to process your personal data",
+        "request2": "Notification of misuse of the processing of your personal data",
+        "request3": "Exercise your ARCO Rights, with a clear and precise description of the data to Access, Rectify, Cancel or Oppose"
+      },
+      "responseTimeTitle": "How long will we take to respond to your request?",
+      "responseTime": "5 business days",
+      "responseMethodTitle": "By what means will we communicate the response to your request?",
+      "responseMethod": "privacy@tech.q-matters.com",
+      "trackingTechTitle": "The use of tracking technologies on our website",
+      "trackingTechIntro": "We inform you that on our website we use cookies, web beacons and other technologies through which it is possible to monitor your behavior as an internet user, as well as provide you with a better service and experience when browsing our page. The personal data we obtain from these tracking technologies are the following:",
+      "trackingTechData": {
+        "data1": "Identifiers, usernames and session passwords",
+        "data2": "Date and time of the start and end of a user session",
+        "data3": "Information about the use of our hosted services and applications"
+      },
+      "disableTracking": "These cookies, web beacons and other technologies can be disabled. To learn how to do this, consult your browser's help menu. Please note that if you disable cookies, you may not be able to access certain personalized functions on our website or hosted applications.",
+      "changesTitle": "How can you find out about changes to this privacy notice?",
+      "changesIntro": "This privacy notice may undergo modifications, changes or updates derived from new legal requirements; of our own needs for the products or services we offer; of our privacy practices; changes in our business model, or for other causes. We are committed to keeping this privacy notice updated on the changes it may undergo and you can always consult the updates that exist on the website www.tech.q-matters.com.",
+      "lastUpdate": "Last update of this privacy notice: September 20, 2024"
   },
+
   "footer": {
     "copy": "Tech Quality Matters © 2024. All Rights Reserved."
   }
