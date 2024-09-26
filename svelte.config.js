@@ -14,7 +14,7 @@ const config = {
     // If your environment is not supported, or you settled on a specific environment, switch out the adapter.
     // See https://kit.svelte.dev/docs/adapters for more information about adapters.
     adapter: IISAdapter({
-      origin: 'http://localhost:5',
+      origin: "http://192.168.0.2:2044",
       pages: 'build',
       assets:'build',
       fallback: undefined,
