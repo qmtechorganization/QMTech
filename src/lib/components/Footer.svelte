@@ -9,9 +9,12 @@
           <p class="text-accent text-3xl">QM Tech</p>
         </a>        
         <ul class="flex gap-5 flex-wrap text-">
-          <li><a href="#services" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.services')}</a></li>
-          <li><a href="#about-us" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.aboutUs')}</a></li>
-          <li><a href="#faqs" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.faqs')}</a></li>
+          
+          <li><a href="/" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.home')}</a></li>
+          <li><a href="/#services" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.services')}</a></li>
+          <li><a href="/#about-us" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.aboutUs')}</a></li>
+          <li><a href="/#faqs" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.faqs')}</a></li>
+          <li><a href="/privacyPolicy" class="text-body tracking-tight hover:text-hover transition duration-200">{$_('header.nav.privacyPolicy')}</a></li>
         </ul>
         <div class="flex flex-wrap gap-6 items-center">
           <a href="https://www.instagram.com/q_matterstech?igsh=MWljamVseWx1ZnprNw==" class="text-gray-400 hover:text-gray-500 transition duration-200">

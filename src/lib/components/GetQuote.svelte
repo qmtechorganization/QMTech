@@ -75,7 +75,6 @@ async function handleSubmit(event) {
       <div class="w-full lg:w-1/2 p-4">
         <div class="lg:pt-24">
           <form on:submit={handleSubmit}>
-            <div class="max-w-2xl">
               <div class="flex flex-wrap -m-4 mb-3">
                 <div class="w-full sm:w-1/2 p-4">
                   <label for="contact2-input1" class="block mb-3 text-sm font-medium tracking-tight text-white">{$_('quote.form.name.label')}</label>
@@ -98,7 +97,7 @@ async function handleSubmit(event) {
                     <option value="Microsoft 365">{$_('quote.form.service.options.micro365')}</option>
                     <option value="Quality & Safety Software">{$_('quote.form.service.options.qualitySSoftware')}</option>
                     <option value="IT Tech Support">{$_('quote.form.service.options.itTechSup')}</option>
-                    <option value="General Inquiries">{$_('quote.form.service.options.')}</option>
+                    <option value="General Inquiries">{$_('quote.form.service.options.generalInquiry')}</option>
                   </select>
                 </div>
               </div>
@@ -112,7 +111,19 @@ async function handleSubmit(event) {
               <!-- Message input -->
               <label for="contact2-input4" class="block mb-3 text-sm font-medium tracking-tight text-white">{$_('quote.form.message.label')}</label>
               <textarea id="contact2-input4" bind:value={message} rows="5" class="w-full px-6 py-4 bg-body text-white rounded-3xl resize-none mb-4 border border-gray-800 placeholder-gray-500 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200" placeholder="{$_('quote.form.message.placeholder')}" required></textarea>
+              <!-- Checkbox -->
+              <div class="flex items-center gap-2 mb-3">
+                <input 
+                  type="checkbox"
+                  id="contact9-input9"
+                  class="w-4 h-4 text-gray-800 rounded border border-gray-800 focus:ring-4 focus:ring-gray-200 outline-none transition duration-200 mr-2"
+                  required>
+                <label for="contact9-input9" class="text-sm font-medium tracking-tight text-white">{$_('quote.form.privacyPolicyNotice')} 
+                  <a class="underline text-accent" href="/privacyPolicy">{$_('quote.form.seePolicy')}</a> 
+                </label>
+              </div>
               
+
               <!-- Submit button -->
               <button type="submit" class="bg-accent w-full h-16 rounded-full py-4 inline-flex items-center justify-center gap-2 hover:bg-hover focus:bg-gray-100 focus:ring-4 focus:ring-gray-200 transition duration-200 px-10">
                 <span class="font-bold tracking-tight text-body">{$_('quote.form.submit')}</span>
@@ -120,7 +131,7 @@ async function handleSubmit(event) {
                   <path d="M14 6.66663H7.33333C4.38781 6.66663 2 9.05444 2 12V13.3333M14 6.66663L10 10.6666M14 6.66663L10 2.66663" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </button>
-            </div>
+          
           </form>
           
         </div>
