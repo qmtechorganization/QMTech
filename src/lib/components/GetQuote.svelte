@@ -1,5 +1,6 @@
 <script>
-  import { _ } from "svelte-i18n";
+  import { _ } from "svelte-i18n"; 
+  
 
   let name = '';
 let email = '';
@@ -24,7 +25,7 @@ async function handleSubmit(event) {
   };
 
   try {
-    const response = await fetch('https://qmtechapi.q-matters.com/api/mail', {
+    const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
@@ -36,7 +37,6 @@ async function handleSubmit(event) {
           - Email: ${payload.email}
           - Service: ${payload.service}
           - Message: ${payload.message}
-         
         `
       })
     });
