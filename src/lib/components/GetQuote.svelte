@@ -92,7 +92,7 @@ async function handleSubmit(event) {
                 <div class="relative">
                   <select id="forms4-input1" bind:value={service} class="appearance-none block p-4 w-full text-sm text-gray-500 placeholder-gray-500 outline-none border border-gray-900 focus:border-gray-300 focus:ring-4 focus:ring-orange-200 rounded-full transition duration-200 bg-black" required>
                     <option value="" disabled selected>{$_('quote.form.service.options.selectOption')}</option>
-                    <option value="Web Hosting">{$_('quote.form.service.options.softDev')}</option>
+                    <option value="Web Hosting">{$_('quote.form.service.options.webDev')}</option>
                     <option value="Software Development">{$_('quote.form.service.options.softDev')}</option>
                     <option value="Microsoft 365">{$_('quote.form.service.options.micro365')}</option>
                     <option value="Quality & Safety Software">{$_('quote.form.service.options.qualitySSoftware')}</option>
