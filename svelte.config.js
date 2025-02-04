@@ -28,7 +28,7 @@ const config = {
   //   assets:'build',
   //   fallback: undefined,
   //   precompress: false,
-  //   strict: false
+  //   strict: falsea
   // }),
   alias: {
     // this will match a file
