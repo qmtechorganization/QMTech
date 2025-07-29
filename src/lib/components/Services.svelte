@@ -41,8 +41,10 @@
                 </div>
             {/each}
         </div>
-        <p class="tracking-tight text-center"></p>
-        <a href="/services.pdf" target="_blank" class="text-accent hover:text-hover transition duration-200 text-center block mt-8">{$_('services.viewAllServices')}</a>
+        <div class="w-full lg:w-1/3 mx-auto mt-12 px-32 md:px-10">
+        <p class="tracking-tight text-center justify-center"></p>
+        <a href="/services.pdf" target="_blank" class="bg-accent hover:bg-hover h-16 border w-60 border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:text-body tracking-tight font-bold transition duration-200 text-body">{$_('services.viewAllServices')}</a>
+        </div>
 
 
     </div>
