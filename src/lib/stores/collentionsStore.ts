@@ -4,3 +4,4 @@ export const clientStore = writable([]);
 
 export const servicesStore = writable([]);
 
+export const contactStore = writable([]);
