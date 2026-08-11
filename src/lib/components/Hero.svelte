@@ -2,13 +2,7 @@
     import { _ } from "svelte-i18n";
     let mobileNavOpen = false;
   </script>
-
-
-<<<<<<< HEAD
-<section id="heroHome" class="px-4 md:px-20 pb-16 bg-no-repeat bg-cover relative pt-24 lg:bg-center bg-right bg-black bg-blend-overlay bg-opacity-60" style="background-image: url('images/3860.jpg')">
-=======
 <section id="heroHome" class="px-4 md:px-20 pb-16 bg-no-repeat bg-cover relative pt-24 lg:bg-center bg-right bg-black bg-blend-overlay bg-opacity-60" style="background-image: url('/images/3860.jpg')">
->>>>>>> 1beaf21163f4bba716239215fec18c04445729d3
 
     <h1 class="font-heading tracking-tight text-white text-center text-5xl md:text-7xl max-w-lg md:max-w-5xl mx-auto mb-6 font-bold">"{$_('hero.headline')}"</h1>
     <p class="text-white tracking-tight mb-10 text-center text-xl text-opacity-80 max-w-xl mx-auto">{$_('hero.subheadline')}</p>
