@@ -2,10 +2,10 @@
     import { _ } from "svelte-i18n";
     let mobileNavOpen = false;
   </script>
-  
 
-<section id="heroHome" class="px-4 md:px-20 pb-16 bg-no-repeat bg-cover relative pt-24 lg:bg-center bg-right bg-black bg-blend-overlay bg-opacity-60" style="background-image: url('https://static.shuffle.dev/uploads/files/ec/ec578d7e076a0dfd4b92738b77ade3a71968172c/3860.jpg')">
-  
+
+<section id="heroHome" class="px-4 md:px-20 pb-16 bg-no-repeat bg-cover relative pt-24 lg:bg-center bg-right bg-black bg-blend-overlay bg-opacity-60" style="background-image: url('images/3860.jpg')">
+
     <h1 class="font-heading tracking-tight text-white text-center text-5xl md:text-7xl max-w-lg md:max-w-5xl mx-auto mb-6 font-bold">"{$_('hero.headline')}"</h1>
     <p class="text-white tracking-tight mb-10 text-center text-xl text-opacity-80 max-w-xl mx-auto">{$_('hero.subheadline')}</p>
     <div class="flex flex-wrap justify-center gap-4 mb-32">
