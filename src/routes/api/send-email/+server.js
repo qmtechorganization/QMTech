@@ -6,8 +6,11 @@ const transporter = nodemailer.createTransport({
   port: 587,
   secure: false, // Use TLS
   auth: {
-    user: "contact@q-matters.com",
+    user: "contact@tech.q-matters.com",
     pass: "QMatters@01",
+  },
+  tls: {
+    rejectUnauthorized: false, // Allow self-signed certificates
   },
 });
 
@@ -16,7 +19,7 @@ export async function POST({ request }) {
     const { body } = await request.json();
 
     const mailOptions = {
-      from: "contact@q-matters.com",
+      from: "contact@tech.q-matters.com",
       to: "info@tech.q-matters.com",
       bcc: "contact@q-matters.com",
       subject: "New Quote Request",

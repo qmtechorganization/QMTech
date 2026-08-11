@@ -41,11 +41,14 @@
                 </div>
             {/each}
         </div>
-        <div class="w-full lg:w-1/3 mx-auto mt-12 px-32 md:px-10">
-        <p class="tracking-tight text-center justify-center"></p>
-        <a href="/services.pdf" target="_blank" class="bg-accent hover:bg-hover h-16 border w-60 border-gray-200 rounded-full px-5 py-4 inline-flex items-center justify-center hover:text-body tracking-tight font-bold transition duration-200 text-body">{$_('services.viewAllServices')}</a>
-        </div>
-
-
+        <div class="mt-16 flex justify-center">
+    <a href="/services.pdf" target="_blank"
+       class="group flex items-center gap-2 px-8 py-3 border border-gray-300 rounded-full text-sm font-bold tracking-tight hover:bg-accent transition-all duration-300">
+        {$_('services.viewAllServices')}
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+        </svg>
+    </a>
+</div>
     </div>
 </section>
