@@ -9,17 +9,25 @@
     },
     "callToAction": "Cotizar"
   },
+  "floating": {
+    "whatsapp": "Escríbenos por WhatsApp",
+    "email": "Ir al formulario de contacto"
+  },
   "hero": {
-    "headline": "Soluciones Personalizadas de Tecnología para el Éxito de Tu Negocio",
-    "subheadline": "Desde aplicaciones personalizadas hasta sistemas de gestión eficientes, te apoyamos en cada paso para garantizar que tu tecnología satisfaga tus necesidades e impulse el éxito de tu empresa.",
-    "callToAction": "Obtén una consulta gratuita.",
-    "customSoftDev": "Desarrollo de Software Personalizado",
-    "webDev": "Desarrollo Web",
-    "itTechSup": "Soporte Técnico de TI"
+    "headline": "Soluciones Web Profesionales para Hacer Crecer tu Negocio",
+    "subheadline": "Sitios web de alto impacto, diseñados a la medida de tu negocio. Desde landing pages accesibles hasta desarrollo web totalmente personalizado, calidad, rapidez y precios transparentes.",
+    "callToAction": "Obtén una Cotización Gratis",
+    "seePricing": "Ver Precios",
+    "priceHook": "Landing pages desde {landing} · Sitios web personalizados desde {custom}",
+    "trustSatisfaction": "100% garantía de satisfacción",
+    "trustDelivery": "En línea en días, no meses",
+    "trustSupport": "Soporte continuo después del lanzamiento",
+    "landingLink": "Landing Pages Económicas",
+    "customLink": "Sitios Web Personalizados"
   },
   "services": {
-    "headline": "Damos Forma al Mañana",
-    "tagLine": "Nuestros Servicios",
+    "headline": "Más de QM Tech",
+    "tagLine": "También disponible",
     "getStarted": "Cotizar",
     "viewAllServices": "Ver Todos los Servicios",
     "service": {
@@ -47,6 +55,41 @@
         "header": "Software de Calidad y Seguridad",
         "description": "Soluciones de software innovadoras diseñadas para mantener y mejorar los estándares de Calidad (ISO 9001) y Seguridad (ISO 14001 & ISO 45001) en tus operaciones. Asegura el cumplimiento y la excelencia operativa con nuestros sistemas expertos."
       }
+    }
+  },
+  "webOffers": {
+    "tagLine": "Sitios Web & Landing Pages",
+    "headline": "Lanza tu Presencia en Línea",
+    "subheadline": "Dos formas de crecer tu presencia en línea — una económica y una totalmente personalizada. Ambas diseñadas, desarrolladas y publicadas por nuestro equipo.",
+    "landing": {
+      "title": "Landing Page Económica",
+      "price": "desde $5,000 MXN",
+      "delivery": "En línea en 5–7 días",
+      "badge": "Más Económica",
+      "perks": {
+        "perk1": "Diseño moderno de una sola página, apto para móvil",
+        "perk2": "Tu información, tu oferta, formulario de contacto y enlace de WhatsApp",
+        "perk3": "Google Maps y datos del negocio",
+        "perk4": "Configuración básica de SEO",
+        "perk5": "Asistencia con hosting y dominio",
+        "perk6": "Ideal para promociones, negocios locales y nuevos lanzamientos"
+      },
+      "cta": "Cotizar este plan"
+    },
+    "custom": {
+      "title": "Sitio Web Personalizado",
+      "price": "desde $28,000 MXN",
+      "delivery": "En línea en 3–5 semanas",
+      "badge": "Totalmente Personalizado",
+      "perks": {
+        "perk1": "Diseño totalmente personalizado según tu marca",
+        "perk2": "Varias páginas: inicio, nosotros, servicios, contacto y más",
+        "perk3": "Gestor de contenido para que lo actualices tú mismo",
+        "perk4": "Formulario de cotización o vitrina de productos integrado",
+        "perk5": "SEO completo, hosting y configuración de dominio",
+        "perk6": "Opciones de soporte y mantenimiento continuo"
+      },
+      "cta": "Cotizar este plan"
     }
   },
   "webHosting": {
@@ -97,6 +140,7 @@
   "clients": {
     "content": "Con años de experiencia en el desarrollo de software, hemos trabajado con una amplia gama de industrias y tenemos la experiencia necesaria para ofrecer soluciones efectivas y escalables.",
     "projects": "Proyectos Completados",
+    "years": "Años de Experiencia",
     "satisfaction": "Satisfacción del Cliente"
   },
   "howWeWork": {
@@ -116,8 +160,13 @@
     }
   },
   "quote": {
-    "heading": "Solicita una Cotización",
-    "description": "Nuestro equipo de desarrolladores de software expertos está aquí para ayudarte a alcanzar tus objetivos empresariales proporcionando soluciones a medida perfectamente adaptadas a tus requerimientos.",
+    "heading": "Solicita tu Cotización Gratis",
+    "description": "Cuéntanos qué necesitas — una landing page, un sitio web personalizado o hosting — y recibe una cotización gratuita y sin compromiso en menos de 24 horas.",
+    "quickNote": "Gratuita y sin compromiso",
+    "whatsapp": "Chatea por WhatsApp",
+    "successTitle": "¡Gracias!",
+    "successMessage": "Tu mensaje fue enviado. Te responderemos en menos de 24 horas.",
+    "errorMessage": "Ocurrió un error. Inténtalo de nuevo o contáctanos directamente.",
     "form": {
       "name": {
         "label": "Tu Nombre",
@@ -130,7 +179,9 @@
       "service": {
         "label": "Servicio",
         "options": {
-          "selectOption": "Secciona una opción",
+          "selectOption": "Selecciona una opción",
+          "landing": "Landing Page Económica",
+          "customSite": "Sitio Web Personalizado",
           "softDev": "Desarrollo de Software",
           "webDev": "Desarrollo Web",
           "micro365": "Microsoft 365",
@@ -183,6 +234,18 @@
       "faq8": {
         "title": "¿En qué industrias se especializan?",
         "content": "Tenemos experiencia trabajando con una variedad de industrias, incluidas la atención médica, las finanzas, la manufactura y el comercio minorista. Nuestro equipo comprende los desafíos únicos de cada sector y adapta nuestras soluciones para satisfacer esas necesidades específicas."
+      },
+      "faq9": {
+        "title": "¿Cuánto cuesta una landing page?",
+        "content": "Nuestras landing pages económicas comienzan desde {price} y están en línea en {delivery}. Son perfectas si necesitas una presencia profesional en línea rápido, sin una gran inversión."
+      },
+      "faq10": {
+        "title": "¿Cuánto tiempo toma publicar un sitio web?",
+        "content": "Una landing page está lista en {landingDelivery}. Un sitio web personalizado toma {customDelivery}, dependiendo del alcance, y te mantenemos informado en cada paso."
+      },
+      "faq11": {
+        "title": "¿Necesito una landing page o un sitio web personalizado?",
+        "content": "Una landing page es ideal para promociones, negocios locales y para tener presencia en línea rápido. Un sitio web personalizado es la opción correcta cuando necesitas varias páginas, más contenido y margen para crecer. ¿No estás seguro? Te recomendaremos la mejor opción para tu presupuesto."
       }
     }
   },

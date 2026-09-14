@@ -1,19 +1,24 @@
 /** @type {import('tailwindcss').Config} */
-const colors = require("tailwindcss/colors");
-
 module.exports = {
-  
+  darkMode: "class",
   theme: {
     extend: {
       backgroundColor: {
-        body: "#020202",
-        hover: "#2E4057",
-        accent: "#65B530"
+        body: "var(--color-bg)",
+        hover: "var(--color-hover)",
+        accent: "var(--color-accent-bg)",
       },
       textColor: {
-        body: "#FFFBFC",
-        hover: "#2E4057",
-        accent: "#33CC33"
+        body: "var(--color-text)",
+        hover: "var(--color-text-hover)",
+        accent: "var(--color-accent-text)",
+      },
+      borderColor: {
+        DEFAULT: "var(--color-border)",
+        accent: "var(--color-accent-bg)",
+      },
+      ringColor: {
+        accent: "var(--color-accent-bg)",
       },
       fontFamily: {
         sans: 'Lexend, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji"',

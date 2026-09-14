@@ -5,21 +5,29 @@
       "services": "Services",
       "aboutUs": "About Us",
       "faqs": "FAQs",
-      "privacyPolicy": "Aviso de Privacidad"
+      "privacyPolicy": "Privacy Policy"
     },
-    "callToAction": "Get A Quote"
+    "callToAction": "Get a Quote"
+  },
+  "floating": {
+    "whatsapp": "Chat on WhatsApp",
+    "email": "Go to the contact form"
   },
   "hero": {
-    "headline": "Tailored Tech Solutions for Your Success",
-    "subheadline": "From custom applications to efficient management systems, we support you at every step to ensure your technology meets your needs and drives your company's success.",
-    "callToAction": "Get A Free Consultation.",
-    "customSoftDev": "Custom Software Development",
-    "webDev": "Web Development",
-    "itTechSup": "IT Technical Support"
+    "headline": "Professional Web Solutions That Grow Your Business",
+    "subheadline": "High-impact websites built around your goals. From affordable landing pages to fully custom web development, we deliver quality, speed, and transparent pricing.",
+    "callToAction": "Get a Free Quote",
+    "seePricing": "See Pricing",
+    "priceHook": "Landing pages from {landing} · Custom websites from {custom}",
+    "trustSatisfaction": "100% client satisfaction guarantee",
+    "trustDelivery": "Live in days, not months",
+    "trustSupport": "Ongoing support after launch",
+    "landingLink": "Budget Landing Pages",
+    "customLink": "Custom Websites"
   },
   "services": {
-    "headline": "We shape the life of tomorrow",
-    "tagLine": "Our Services",
+    "headline": "More from QM Tech",
+    "tagLine": "Also available",
     "getStarted": "Get Started",
     "viewAllServices": "View All Services",
     "service": {
@@ -47,6 +55,41 @@
         "header": "Quality and Safety Software",
         "description": "Innovative software solutions designed to uphold and enhance Quality (ISO 9001) & Safety (ISO 14001 & ISO 45001) standards in your operations. Ensure compliance and operational excellence with our expert systems."
       }
+    }
+  },
+  "webOffers": {
+    "tagLine": "Websites & Landing Pages",
+    "headline": "Get Online Your Way",
+    "subheadline": "Two ways to grow your presence online — one budget-friendly, one fully custom. Both designed, built and launched by our team.",
+    "landing": {
+      "title": "Budget Landing Page",
+      "price": "from $299 USD",
+      "delivery": "Live in 5–7 days",
+      "badge": "Most Affordable",
+      "perks": {
+        "perk1": "Modern, mobile-friendly single-page design",
+        "perk2": "Your info, your offer, contact form & WhatsApp link",
+        "perk3": "Google Maps & business details",
+        "perk4": "Basic SEO setup",
+        "perk5": "Hosting & domain setup assistance",
+        "perk6": "Perfect for promotions, local businesses & new launches"
+      },
+      "cta": "Get This Quote"
+    },
+    "custom": {
+      "title": "Custom Website",
+      "price": "from $1,500 USD",
+      "delivery": "Live in 3–5 weeks",
+      "badge": "Fully Custom",
+      "perks": {
+        "perk1": "Fully custom design built around your brand",
+        "perk2": "Multiple pages: home, about, services, contact and more",
+        "perk3": "Content management so you can update it yourself",
+        "perk4": "Online quote form or product showcase built-in",
+        "perk5": "Complete SEO, hosting & domain setup",
+        "perk6": "Ongoing support and maintenance options"
+      },
+      "cta": "Get This Quote"
     }
   },
   "webHosting": {
@@ -97,6 +140,7 @@
   "clients": {
     "content": "With years of experience in custom software development, we have worked with a wide range of industries and have the necessary expertise to deliver effective and scalable solutions.",
     "projects": "Projects completed",
+    "years": "Years of Experience",
     "satisfaction": "Client satisfaction"
   },
   "howWeWork": {
@@ -116,8 +160,13 @@
     }
   },
   "quote": {
-    "heading": "Get a Free Quote",
-    "description": "Our team of expert software developers is here to help you achieve your business goals by providing tailored solutions perfectly suited to your requirements.",
+    "heading": "Get Your Free Quote",
+    "description": "Tell us what you need — a landing page, a custom website, or hosting — and get a free, no-obligation quote within 24 hours.",
+    "quickNote": "Free & no-obligation",
+    "whatsapp": "Chat on WhatsApp",
+    "successTitle": "Thank you!",
+    "successMessage": "Your message was sent. We'll reply within 24 hours.",
+    "errorMessage": "Something went wrong. Please try again or reach us directly.",
     "form": {
       "name": {
         "label": "Your Name",
@@ -128,10 +177,12 @@
         "placeholder": "example@email.com"
       },
       "service": {
-        "label": "Servicio",
+        "label": "Service",
         "options": {
           "selectOption": "Select an Option",
-          "softDev": "Sofware Development",
+          "landing": "Budget Landing Page",
+          "customSite": "Custom Website",
+          "softDev": "Software Development",
           "webDev": "Web Development",
           "micro365": "Microsoft 365",
           "itTechSup": "IT Technical Support",
@@ -183,6 +234,18 @@
       "faq8": {
         "title": "What industries do you specialize in?",
         "content": "We have experience working with a variety of industries, including healthcare, finance, manufacturing, and retail. Our team understands the unique challenges of each sector and tailors our solutions to meet those specific needs."
+      },
+      "faq9": {
+        "title": "How much does a landing page cost?",
+        "content": "Our budget landing pages start at {price} and go live in {delivery}. They're perfect if you need a professional online presence fast, without a big investment."
+      },
+      "faq10": {
+        "title": "How long does it take to launch a website?",
+        "content": "A landing page is ready in {landingDelivery}. A custom website takes {customDelivery}, depending on scope — and we keep you updated at every step."
+      },
+      "faq11": {
+        "title": "Do I need a landing page or a custom website?",
+        "content": "A landing page is great for promotions, local businesses and getting online fast. A custom website is the right choice when you need multiple pages, more content and room to grow. Not sure? We'll recommend the best fit for your budget."
       }
     }
   },

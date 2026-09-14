@@ -3,11 +3,63 @@
 @import "tailwindcss/utilities";
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@400;700&display=swap');
 
+:root {
+  --color-bg: #ffffff;
+  --color-text: #1a1d1a;
+  --color-text-hover: #ffffff;
+  --color-hover: #3e8e3e;
+  --color-accent-bg: #16a34a;
+  --color-accent-text: #15803d;
+  --color-border: #e5e7eb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+.dark {
+  --color-bg: #0a0c0a;
+  --color-text: #fffbff;
+  --color-text-hover: #2e4057;
+  --color-hover: #2e4057;
+  --color-accent-bg: #65b530;
+  --color-accent-text: #33cc33;
+  --color-border: #1f2937;
+}
 
 body {
   @apply bg-body;
   @apply antialiased;
-  @apply text-body
+  @apply text-body;
+  @apply transition-colors duration-300;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
 }
 
 .custom-switch-1:checked + div {
@@ -42,3 +94,28 @@ body {
   @apply block;
 }
 
+.btn-shimmer {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  animation: shimmer 2.8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-shimmer::after {
+    animation: none;
+    transform: none;
+  }
+}

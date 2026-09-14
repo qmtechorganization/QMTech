@@ -3,6 +3,7 @@
     import { clientStore, servicesStore } from '$lib/stores/collentionsStore';
     import Header from "$lib/components/Header.svelte";
     import Hero from "$lib/components/Hero.svelte";
+    import WebOffers from "$lib/components/WebOffers.svelte";
     import Services from "$lib/components/Services.svelte";
     import Hosting from "$lib/components/Hosting.svelte";
     import HowWeWork from "$lib/components/HowWeWork.svelte";
@@ -38,11 +39,12 @@
 
 <Header></Header>
 <Hero></Hero>
+<WebOffers></WebOffers>
 <Services></Services>
-<Hosting></Hosting>
+<HowWeWork></HowWeWork>
 <AboutUs></AboutUs>
 <OurClients></OurClients>
-<HowWeWork></HowWeWork>
-<GetQuote></GetQuote>
+<Hosting></Hosting>
 <Faq></Faq>
+<GetQuote></GetQuote>
 <Footer></Footer>
