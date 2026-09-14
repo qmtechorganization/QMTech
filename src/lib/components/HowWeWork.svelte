@@ -32,7 +32,7 @@
       {#each steps as { number, title, description, image }, index}
         <div class="w-full lg:w-1/3 p-4" use:reveal={{ delay: index * 100 }}>
           <div class="relative group overflow-hidden rounded-2xl" style="height:518px;">
-            <img class="absolute bg-black inset-0 w-full h-full object-cover brightness-75 transition-transform duration-500 group-hover:scale-105" src={image} alt={title}>
+            <img class="absolute bg-black inset-0 w-full h-full object-cover brightness-75 transition-transform duration-500 group-hover:scale-105" src={image} alt={$_(title)}>
             <div class="absolute top-8 right-8">
               <div class="bg-white rounded-full w-14 h-14 flex items-center justify-center">
                 <p class="tracking-tight text-lg text-black font-semibold">{number}</p>

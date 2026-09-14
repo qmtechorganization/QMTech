@@ -72,7 +72,7 @@
             </p>
           </div>
           <div class="relative overflow-hidden h-[30rem] w-full mt-6">
-            <img class="absolute inset-0 md:w-[80%] w-full h-full object-cover object-center rounded-lg" src="/images/getQuote/getQuote.jpg" alt="Get Quote">
+            <img class="absolute inset-0 md:w-[80%] w-full h-full object-cover object-center rounded-lg" src="/images/getQuote/getQuote.jpg" alt="Cotización gratis de página web - QM Tech">
           </div>
         </div>
       </div>

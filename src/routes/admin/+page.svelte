@@ -256,6 +256,7 @@
 
 <svelte:head>
   <title>QM Tech Admin</title>
+  <meta name="robots" content="noindex, nofollow" />
 </svelte:head>
 
 {#if !authenticated}

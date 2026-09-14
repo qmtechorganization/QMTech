@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.tech.q-matters.com/</loc>
+    <lastmod>2026-09-14</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="es-MX" href="https://www.tech.q-matters.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.tech.q-matters.com/"/>
+  </url>
+  <url>
+    <loc>https://www.tech.q-matters.com/privacyPolicy</loc>
+    <lastmod>2024-09-20</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+</urlset>

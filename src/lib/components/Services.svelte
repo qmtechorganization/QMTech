@@ -18,7 +18,7 @@
         {#each services as service, index}
             <div class="w-full md:w-1/2 lg:w-1/3 p-2">
                 <a href="#getQuote" class="block h-full group bg-gray-50 dark:bg-white/5 hover:bg-gray-100 dark:hover:bg-white/10 border border-gray-200 dark:border-white/10 hover:border-accent rounded-2xl p-5 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:shadow-green-500/10" use:reveal={{ delay: index * 70 }}>
-                    <img class="h-10 mb-3" src="https://qmtechbase.ezhostingit.com/api/files/{service.collectionId}/{service.id}/{service.icon}" alt="Service Icon">
+                    <img class="h-10 mb-3" src="https://qmtechbase.ezhostingit.com/api/files/{service.collectionId}/{service.id}/{service.icon}" alt={$_('services.service.'+service.serviceCode+'.header')}>
                     <p class="text-body text-lg tracking-tight font-semibold mb-1">{$_('services.service.'+service.serviceCode+'.header')}</p>
                     <p class="text-gray-500 dark:text-gray-400 text-sm tracking-tight leading-relaxed">{$_('services.service.'+service.serviceCode+'.description')}</p>
                     <span class="inline-flex items-center gap-1 text-accent text-sm font-semibold mt-3 group-hover:translate-x-1 transition-transform duration-200">
