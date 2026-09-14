@@ -15,6 +15,8 @@
   type Collection = { name: string; id: string; fields: Field[] };
   type RecordData = { id: string; [key: string]: unknown };
 
+  const PER_PAGE = 50;
+
   let email = '';
   let password = '';
   let adminEmail = '';
@@ -25,6 +27,9 @@
   let collections: Collection[] = [];
   let selectedCollection: Collection | null = null;
   let records: RecordData[] = [];
+  let page = 1;
+  let totalPages = 1;
+  let totalItems = 0;
   let selectedRecord: RecordData | null = null;
   let formData: Record<string, unknown> = {};
   let fileData: Record<string, File> = {};
@@ -40,13 +45,39 @@
     .filter((field): field is Field => Boolean(field));
 
   async function api(path: string, options: { method?: string; body?: string | FormData; headers?: Record<string, string> } = {}) {
-    const response = await fetch(path, {
-      ...options,
-      headers: options.body instanceof FormData ? options.headers : { 'content-type': 'application/json', ...(options.headers || {}) }
-    });
-    const body = await response.json();
-    if (!response.ok) throw new Error(body.message || 'Request failed.');
-    return body;
+    try {
+      const response = await fetch(path, {
+        ...options,
+        headers: options.body instanceof FormData
+          ? options.headers
+          : { 'content-type': 'application/json', ...(options.headers || {}) }
+      });
+      let body;
+      try { body = await response.json(); } catch { body = null; }
+      if (!response.ok) {
+        if (response.status === 401) authenticated = false;
+        throw new Error(body?.message || `Request failed (${response.status}).`);
+      }
+      return body;
+    } catch (networkError) {
+      if (networkError instanceof TypeError) {
+        throw new Error('Network error. Check your connection and try again.');
+      }
+      throw networkError;
+    }
+  }
+
+  async function fetchRecords(collection: Collection, target = 1) {
+    error = '';
+    try {
+      const result = await api(`/api/admin/records/${encodeURIComponent(collection.name)}?page=${target}&perPage=${PER_PAGE}`);
+      records = result.items;
+      page = result.page;
+      totalPages = result.totalPages;
+      totalItems = result.totalItems;
+    } catch (requestError) {
+      error = requestError instanceof Error ? requestError.message : 'Unable to load records.';
+    }
   }
 
   async function loadCollections() {
@@ -89,7 +120,15 @@
     authenticated = false;
     collections = [];
     records = [];
+    page = 1;
+    totalPages = 1;
+    totalItems = 0;
+    selectedCollection = null;
     selectedRecord = null;
+    formData = {};
+    fileData = {};
+    error = '';
+    showModal = false;
   }
 
   async function selectCollection(collection: Collection) {
@@ -98,13 +137,16 @@
     formData = {};
     fileData = {};
     showModal = false;
-    error = '';
-    try {
-      const result = await api(`/api/admin/records/${encodeURIComponent(collection.name)}`);
-      records = result.items;
-    } catch (requestError) {
-      error = requestError instanceof Error ? requestError.message : 'Unable to load records.';
-    }
+    records = [];
+    page = 1;
+    totalPages = 1;
+    totalItems = 0;
+    await fetchRecords(collection, 1);
+  }
+
+  function loadPage(target: number) {
+    if (!selectedCollection || target < 1 || target > totalPages) return;
+    return fetchRecords(selectedCollection, target);
   }
 
   function newRecord() {
@@ -119,7 +161,10 @@
     selectedRecord = record;
     formData = {};
     fileData = {};
-    for (const field of editableFields) formData[field.name] = record[field.name] ?? defaultValue(field);
+    for (const field of editableFields) {
+      if (field.type === 'file') continue;
+      formData[field.name] = record[field.name] ?? defaultValue(field);
+    }
     showModal = true;
   }
 
@@ -161,8 +206,9 @@
 
   function displayValue(value: unknown) {
     if (value === null || value === undefined || value === '') return '-';
-    if (Array.isArray(value)) return value.join(', ');
     if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    if (Array.isArray(value)) return value.join(', ');
+    if (typeof value === 'object') return JSON.stringify(value);
     return String(value);
   }
 
@@ -173,8 +219,12 @@
     try {
       const path = `/api/admin/records/${encodeURIComponent(selectedCollection.name)}`;
       const payload = new FormData();
-      for (const [name, value] of Object.entries(formData)) {
-        if (value !== undefined && value !== null && value !== '') payload.append(name, String(value));
+      for (const field of editableFields) {
+        if (field.type === 'file') continue;
+        const value = formData[field.name];
+        if (value !== undefined && value !== null && value !== '') {
+          payload.append(field.name, String(value));
+        }
       }
       for (const [name, file] of Object.entries(fileData)) payload.append(name, file);
       const saved = selectedRecord
@@ -262,7 +312,7 @@
                   {:else}
                     {#each records as record, index}
                       <tr class="transition hover:bg-gray-50 dark:hover:bg-white/[0.03]">
-                        <td class="px-5 py-4 text-gray-400">{index + 1}</td>
+                        <td class="px-5 py-4 text-gray-400">{(page - 1) * PER_PAGE + index + 1}</td>
                         {#each tableFields as field}<td class="max-w-[15rem] truncate px-5 py-4 font-medium">{displayValue(record[field.name])}</td>{/each}
                         <td class="whitespace-nowrap px-5 py-4 text-right"><button class="mr-3 font-semibold text-accent hover:underline" on:click={() => editRecord(record)}>Edit</button><button class="font-semibold text-red-600 hover:underline" on:click={() => deleteRecord(record)}>Delete</button></td>
                       </tr>
@@ -271,6 +321,18 @@
                 </tbody>
               </table>
             </div>
+            {#if totalPages > 1 || totalItems > 0}
+              <div class="flex flex-wrap items-center justify-between gap-4 border-t border-gray-200 px-5 py-4 dark:border-white/10">
+                <p class="text-sm text-gray-500 dark:text-gray-400">{totalItems} record{totalItems === 1 ? '' : 's'}</p>
+                {#if totalPages > 1}
+                  <div class="flex items-center gap-2 text-sm">
+                    <button type="button" class="rounded-lg border border-gray-300 px-3 py-2 font-medium disabled:opacity-40 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-white/10" disabled={page <= 1} on:click={() => loadPage(page - 1)}>Previous</button>
+                    <span class="px-2 text-gray-500 dark:text-gray-400">Page {page} of {totalPages}</span>
+                    <button type="button" class="rounded-lg border border-gray-300 px-3 py-2 font-medium disabled:opacity-40 hover:bg-gray-50 dark:border-gray-700 dark:hover:bg-white/10" disabled={page >= totalPages} on:click={() => loadPage(page + 1)}>Next</button>
+                  </div>
+                {/if}
+              </div>
+            {/if}
           </div>
 
         {/if}

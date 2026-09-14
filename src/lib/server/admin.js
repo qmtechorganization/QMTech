@@ -8,37 +8,36 @@ function getPocketBase() {
   return new PocketBase(env.PB_URL || 'https://qmtechbase.ezhostingit.com');
 }
 
-export async function authenticateAdmin(token) {
-  if (!token) return null;
-
+async function getClientForToken(token) {
   const pb = getPocketBase();
   pb.authStore.save(token);
+  await pb.collection('_superusers').authRefresh();
+  return pb;
+}
 
+export async function authenticateAdmin(token) {
+  if (!token) return null;
   try {
-    await pb.collection('_superusers').authRefresh();
-    return pb.authStore.model;
+    return (await getClientForToken(token)).authStore.model;
   } catch {
     return null;
   }
 }
 
 export async function requireAdmin(cookies) {
-  const model = await authenticateAdmin(cookies.get(ADMIN_COOKIE));
-  if (!model) {
+  const token = cookies.get(ADMIN_COOKIE);
+  if (!token) {
     const error = new Error('Unauthorized');
     error.status = 401;
     throw error;
   }
-  return model;
-}
-
-export async function getSuperuserClient() {
-  const pb = getPocketBase();
-  if (!env.PB_EMAIL || !env.PB_PASSWORD) {
-    throw new Error('PB_EMAIL and PB_PASSWORD are required for admin operations.');
+  try {
+    return await getClientForToken(token);
+  } catch {
+    const error = new Error('Unauthorized');
+    error.status = 401;
+    throw error;
   }
-  await pb.collection('_superusers').authWithPassword(env.PB_EMAIL, env.PB_PASSWORD);
-  return pb;
 }
 
 export function adminCookieOptions() {

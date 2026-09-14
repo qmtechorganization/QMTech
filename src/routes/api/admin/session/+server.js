@@ -4,8 +4,8 @@ import { requireAdmin } from '$lib/server/admin';
 
 export async function GET({ cookies }) {
   try {
-    const admin = await requireAdmin(cookies);
-    return json({ email: admin.email });
+    const pb = await requireAdmin(cookies);
+    return json({ email: pb.authStore.model.email });
   } catch {
     return json({ message: 'Unauthorized' }, { status: 401 });
   }

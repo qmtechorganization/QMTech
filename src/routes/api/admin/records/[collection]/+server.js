@@ -1,11 +1,10 @@
 // @ts-nocheck
 import { json } from '@sveltejs/kit';
-import { getSuperuserClient, requireAdmin, assertManagedCollection } from '$lib/server/admin';
+import { requireAdmin, assertManagedCollection } from '$lib/server/admin';
 
 async function authorize(cookies, collection) {
-  await requireAdmin(cookies);
+  const pb = await requireAdmin(cookies);
   assertManagedCollection(collection);
-  const pb = await getSuperuserClient();
   await pb.collections.getOne(collection);
   return pb;
 }
@@ -13,9 +12,15 @@ async function authorize(cookies, collection) {
 export async function GET({ cookies, params, url }) {
   try {
     const pb = await authorize(cookies, params.collection);
-    const page = Number(url.searchParams.get('page') || 1);
-    const perPage = Number(url.searchParams.get('perPage') || 50);
-    return json(await pb.collection(params.collection).getList(page, perPage, { sort: '-created' }));
+    const page = Math.max(1, Number(url.searchParams.get('page') || 1));
+    const perPage = Math.min(100, Math.max(1, Number(url.searchParams.get('perPage') || 50)));
+    const query = { sort: '-created' };
+    try {
+      return json(await pb.collection(params.collection).getList(page, perPage, query));
+    } catch (error) {
+      if (error.status !== 400) throw error;
+      return json(await pb.collection(params.collection).getList(page, perPage, {}));
+    }
   } catch (error) {
     return json({ message: error.message || 'Unable to load records.' }, { status: error.status || 500 });
   }

@@ -1,11 +1,10 @@
 // @ts-nocheck
 import { json } from '@sveltejs/kit';
-import { getSuperuserClient, requireAdmin } from '$lib/server/admin';
+import { requireAdmin } from '$lib/server/admin';
 
 export async function GET({ cookies }) {
   try {
-    await requireAdmin(cookies);
-    const pb = await getSuperuserClient();
+    const pb = await requireAdmin(cookies);
     const collections = await pb.collections.getFullList({ sort: 'name' });
 
     return json(collections
