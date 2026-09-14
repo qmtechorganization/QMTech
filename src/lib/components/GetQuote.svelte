@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { _ } from "svelte-i18n";
   import {pb} from '../pocketobase';
   import { reveal } from '$lib/actions/reveal';
@@ -24,7 +24,7 @@
     { value: 'General Inquiries', labelKey: 'quote.form.service.options.generalInquiry' }
   ];
 
-  async function handleSubmit(event) {
+  async function handleSubmit(event: SubmitEvent) {
     event.preventDefault();
 
     // If the howdydihoneypot field is filled, it's likely a bot

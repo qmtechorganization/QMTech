@@ -30,7 +30,7 @@
         {/each}
     </div>
     <div class="mt-10 flex justify-center">
-        <a href="/services.pdf" target="_blank"
+        <a href="/services.pdf" target="_blank" rel="noopener noreferrer"
            class="group flex items-center gap-2 px-8 py-3 border border-gray-300 rounded-full text-sm font-bold tracking-tight text-body hover:bg-accent hover:text-white dark:hover:bg-accent transition-all duration-300">
             {$_('services.viewAllServices')}
             <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">

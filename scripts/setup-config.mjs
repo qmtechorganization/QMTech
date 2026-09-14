@@ -57,6 +57,10 @@ async function main() {
     });
     console.log(`Collection "${COLLECTION_NAME}" created.`);
   } else {
+    await pb.collections.update(collection.id, {
+      listRule: null,
+      viewRule: null,
+    });
     console.log(`Collection "${COLLECTION_NAME}" already exists.`);
   }
 

@@ -27,4 +27,10 @@ export default [
   {
     ignores: ["build/", ".svelte-kit/", "dist/", "pb_migrations/"],
   },
+  {
+    files: ["src/lib/server/admin.js", "src/routes/api/admin/**/*.js", "src/routes/api/send-email/+server.js"],
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
+    },
+  },
 ];

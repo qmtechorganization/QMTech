@@ -43,9 +43,8 @@
     <h1 class="font-heading tracking-tight text-center text-4xl md:text-6xl font-medium mb-12" use:reveal>FAQ</h1>
     <div class="rounded-2xl p-8 md:px16" use:reveal={{ delay: 120 }}>
       {#each accordions as accordion, index}
-        <!-- svelte-ignore a11y-click-events-have-key-events -->
-        <!-- svelte-ignore a11y-no-static-element-interactions -->
-        <div class="pb-8 border-b border-gray-200 dark:border-white/10 mb-8 cursor-pointer group" on:click={() => toggleAccordion(index)}>
+        <div class="pb-8 border-b border-gray-200 dark:border-white/10 mb-8 group">
+          <button type="button" class="w-full text-left cursor-pointer" aria-expanded={accordion.open} on:click={() => toggleAccordion(index)}>
           <div class="flex items-center justify-between w-full gap-4">
             <p class="tracking-tight w-3/4 text-xl font-semibold transition-colors duration-200 group-hover:text-accent">{$_(accordion.title)}</p>
             <div class={accordion.open ? 'hidden' : 'bg-white hover:bg-accent text-body hover:text-white dark:bg-gray-800 transition duration-200 focus:bg-accent focus:ring-4 focus:ring-orange-200 w-8 h-8 flex items-center justify-center rounded-full scale-100 group-hover:scale-110'}>
@@ -59,6 +58,7 @@
               </svg>
             </div>
           </div>
+          </button>
           <div class={`overflow-hidden transition-all duration-500 ${accordion.open ? 'h-auto' : 'h-0'}`}>
             <p class="tracking-tight text-body max-w-3xl mt-4">{$_(accordion.content, { values: faqAnswer(accordion.paramsKey) })}</p>
           </div>

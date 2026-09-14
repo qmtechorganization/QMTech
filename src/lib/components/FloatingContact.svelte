@@ -28,8 +28,7 @@
   {#if whatsappUrl}
     <a
       href={whatsappUrl}
-      target="_blank"
-      rel="noopener"
+      target="_blank" rel="noopener noreferrer"
       aria-label={$_('floating.whatsapp')}
       in:fly={{ y: 26, duration: 500 }}
       class="group relative flex h-14 w-14 items-center justify-center rounded-full text-white shadow-lg shadow-black/25 transition-transform duration-200 hover:scale-110 active:scale-95 focus:outline-none focus-visible:ring-4 focus-visible:ring-green-300"

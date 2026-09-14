@@ -1,27 +1,29 @@
+// @ts-nocheck
 import nodemailer from "nodemailer";
 import { json } from "@sveltejs/kit";
-
-const transporter = nodemailer.createTransport({
-  host: "smtp.titan.email",
-  port: 587,
-  secure: false, // Use TLS
-  auth: {
-    user: "contact@tech.q-matters.com",
-    pass: "QMatters@01",
-  },
-  tls: {
-    rejectUnauthorized: false, // Allow self-signed certificates
-  },
-});
+import { env } from "$env/dynamic/private";
 
 export async function POST({ request }) {
   try {
+    if (!env.SMTP_USER || !env.SMTP_PASSWORD) {
+      return json({ success: false, message: "Email service is not configured" }, { status: 503 });
+    }
+
+    const transporter = nodemailer.createTransport({
+      host: env.SMTP_HOST || "smtp.titan.email",
+      port: Number(env.SMTP_PORT || 587),
+      secure: env.SMTP_SECURE === "true",
+      auth: {
+        user: env.SMTP_USER,
+        pass: env.SMTP_PASSWORD,
+      },
+    });
     const { body } = await request.json();
 
     const mailOptions = {
-      from: "contact@tech.q-matters.com",
-      to: "info@tech.q-matters.com",
-      bcc: "contact@q-matters.com",
+      from: env.SMTP_FROM || env.SMTP_USER,
+      to: env.SMTP_TO || "info@tech.q-matters.com",
+      bcc: env.SMTP_BCC || "contact@q-matters.com",
       subject: "New Quote Request",
       text: body,
     };

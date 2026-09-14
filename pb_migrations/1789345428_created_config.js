@@ -3,8 +3,8 @@ migrate(
     const collection = new Collection({
       name: 'config',
       type: 'base',
-      listRule: '',
-      viewRule: '',
+       listRule: null,
+       viewRule: null,
       createRule: null,
       updateRule: null,
       deleteRule: null,

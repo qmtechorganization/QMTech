@@ -18,7 +18,7 @@
     <div class="relative flex flex-wrap justify-center gap-4 mb-12" use:reveal={{ delay: 260 }}>
       <a href="#getQuote" class="btn-shimmer relative bg-accent h-16 rounded-full px-8 py-4 inline-flex items-center justify-center gap-2 tracking-tight hover:bg-hover hover:text-white hover:scale-[1.03] active:scale-[0.98] focus:bg-green-500 focus:ring-4 focus:ring-green-200 transition duration-200">
         <span class="text-white font-bold tracking-tight">{$_('hero.callToAction')}</span>
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewbox="0 0 16 16" fill="none">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
           <path d="M14 6.66667H7.33333C4.38781 6.66667 2 9.05449 2 12V13.3333M14 6.66667L10 10.6667M14 6.66667L10 2.66667" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
         </svg>
       </a>

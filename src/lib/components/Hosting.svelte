@@ -27,7 +27,7 @@
                   <p class="tracking-tight text-gray-600 dark:text-gray-300 text-center mb-7">{$_('webHosting.starterPack.subtitle')}</p>
                   <ul class="flex flex-col gap-4 mb-8">
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">
@@ -35,49 +35,49 @@
                       </span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="size-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="size-10">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.email')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.ssl')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.bandwith')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.migration')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.ddosProtection')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.firewall')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.nameservers')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.starterPack.perks.scanner')}</span>
@@ -92,55 +92,55 @@
                   <p class="tracking-tight text-gray-600 dark:text-gray-300 text-center mb-7">{$_('webHosting.smallBusiness.subtitle')}</p>
                   <ul class="flex flex-col gap-4 mb-8">
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.websites')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="size-10">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="size-10">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.email')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.ssl')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.bandwith')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.migration')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.ddosProtection')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.firewall')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.nameservers')}</span>
                     </li>
                     <li class="flex items-center gap-2">
-                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewbox="0 0 20 20" fill="none" class="">
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none" class="">
                         <path d="M4.16667 10.8333L7.50001 14.1666L15.8333 5.83325" stroke="#22C55E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
                       </svg>
                       <span class="tracking-tight font-medium">{$_('webHosting.smallBusiness.perks.scanner')}</span>
