@@ -8,6 +8,8 @@ services:
     container_name: qmtechapp
     ports:
       - "80:5173"
+    env_file:
+      - .env
     environment:
       - PORT=5173
       - NODE_ENV=production
