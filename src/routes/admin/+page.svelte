@@ -29,6 +29,7 @@
   let formData: Record<string, unknown> = {};
   let fileData: Record<string, File> = {};
   let saving = false;
+  let showModal = false;
 
   $: editableFields = selectedCollection?.fields.filter(
     (field) => !field.system && !['id', 'created', 'updated'].includes(field.name)
@@ -94,11 +95,13 @@
   async function selectCollection(collection: Collection) {
     selectedCollection = collection;
     selectedRecord = null;
+    formData = {};
+    fileData = {};
+    showModal = false;
     error = '';
     try {
       const result = await api(`/api/admin/records/${encodeURIComponent(collection.name)}`);
       records = result.items;
-      newRecord();
     } catch (requestError) {
       error = requestError instanceof Error ? requestError.message : 'Unable to load records.';
     }
@@ -109,6 +112,7 @@
     formData = {};
     fileData = {};
     error = '';
+    showModal = true;
   }
 
   function editRecord(record: RecordData) {
@@ -116,7 +120,7 @@
     formData = {};
     fileData = {};
     for (const field of editableFields) formData[field.name] = record[field.name] ?? defaultValue(field);
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    showModal = true;
   }
 
   function defaultValue(field: Field) {
@@ -177,7 +181,8 @@
         ? await api(`${path}/${selectedRecord.id}`, { method: 'PATCH', body: payload })
         : await api(path, { method: 'POST', body: payload });
       await selectCollection(selectedCollection);
-      editRecord(saved);
+      showModal = false;
+      selectedRecord = saved;
     } catch (requestError) {
       error = requestError instanceof Error ? requestError.message : 'Unable to save record.';
     } finally {
@@ -268,31 +273,39 @@
             </div>
           </div>
 
-          <div class="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#171a18]">
-            <div class="mb-6 flex items-center justify-between gap-4"><div><p class="text-xs font-bold uppercase tracking-wider text-gray-400">{selectedRecord ? 'Editing' : 'Creating'}</p><h3 class="mt-1 text-xl font-semibold">{selectedRecord ? selectedRecord.id : 'New record'}</h3></div>{#if selectedRecord}<button class="text-sm font-semibold text-gray-500 hover:text-body dark:text-gray-400" on:click={newRecord}>Clear form</button>{/if}</div>
-            <div class="grid gap-5 md:grid-cols-2">
-              {#each editableFields as field}
-                <div class={field.type === 'editor' || field.type === 'json' ? 'md:col-span-2' : ''}>
-                  <label class="mb-2 block text-sm font-semibold" for={`field-${field.name}`}>{fieldLabel(field)}{#if field.required}<span class="ml-1 text-red-500">*</span>{/if}</label>
-                  {#if field.type === 'bool'}
-                    <label class="flex h-11 items-center gap-3 rounded-xl border border-gray-300 px-4 dark:border-gray-700"><input id={`field-${field.name}`} type="checkbox" checked={Boolean(fieldValue(field))} on:change={(event) => handleCheckbox(event, field.name)} class="h-4 w-4 accent-green-600"><span class="text-sm">Enabled</span></label>
-                  {:else if field.type === 'file'}
-                    <input id={`field-${field.name}`} type="file" accept={field.mimeTypes?.join(',')} on:change={(event) => handleFile(event, field.name)} class="block w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 text-sm dark:border-gray-700">
-                    {#if selectedRecord?.[field.name]}<p class="mt-1 text-xs text-gray-500">Current file: {displayValue(selectedRecord[field.name])}</p>{/if}
-                  {:else if field.type === 'select' && field.options?.values}
-                    <select id={`field-${field.name}`} value={String(fieldValue(field))} on:change={(event) => handleSelect(event, field.name)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700"><option value="">Select...</option>{#each field.options.values as option}<option value={option}>{option}</option>{/each}</select>
-                  {:else if field.type === 'editor' || field.type === 'json'}
-                    <textarea id={`field-${field.name}`} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} rows="5" class="w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 font-mono text-sm dark:border-gray-700"></textarea>
-                  {:else}
-                    <input id={`field-${field.name}`} type={field.type === 'number' ? 'number' : field.type === 'email' ? 'email' : 'text'} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700">
-                  {/if}
-                </div>
-              {/each}
-            </div>
-            <div class="mt-6 flex justify-end"><button class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm disabled:opacity-50" on:click={saveRecord} disabled={saving}>{saving ? 'Saving...' : selectedRecord ? 'Save changes' : 'Create record'}</button></div>
-          </div>
         {/if}
       </section>
     </div>
   </main>
+{/if}
+
+{#if authenticated && showModal && selectedCollection}
+  <div class="fixed inset-0 z-50 flex items-start justify-center overflow-y-auto bg-black/60 px-4 py-8">
+    <form class="my-auto w-full max-w-3xl rounded-2xl border border-gray-200 bg-white p-6 shadow-2xl dark:border-white/10 dark:bg-[#171a18]" on:submit|preventDefault={saveRecord}>
+      <div class="mb-6 flex items-start justify-between gap-4 border-b border-gray-200 pb-5 dark:border-white/10">
+        <div><p class="text-xs font-bold uppercase tracking-wider text-accent">{selectedRecord ? 'Edit record' : 'New record'}</p><h2 class="mt-1 font-heading text-2xl font-semibold">{collectionLabel(selectedCollection.name)}</h2></div>
+        <button type="button" aria-label="Close" class="grid h-9 w-9 place-items-center rounded-full text-2xl text-gray-500 hover:bg-gray-100 dark:hover:bg-white/10" on:click={() => showModal = false}>×</button>
+      </div>
+      <div class="grid max-h-[65vh] gap-5 overflow-y-auto px-1 md:grid-cols-2">
+        {#each editableFields as field}
+          <div class={field.type === 'editor' || field.type === 'json' ? 'md:col-span-2' : ''}>
+            <label class="mb-2 block text-sm font-semibold" for={`modal-field-${field.name}`}>{fieldLabel(field)}{#if field.required}<span class="ml-1 text-red-500">*</span>{/if}</label>
+            {#if field.type === 'bool'}
+              <label class="flex h-11 items-center gap-3 rounded-xl border border-gray-300 px-4 dark:border-gray-700"><input id={`modal-field-${field.name}`} type="checkbox" checked={Boolean(fieldValue(field))} on:change={(event) => handleCheckbox(event, field.name)} class="h-4 w-4 accent-green-600"><span class="text-sm">Enabled</span></label>
+            {:else if field.type === 'file'}
+              <input id={`modal-field-${field.name}`} type="file" accept={field.mimeTypes?.join(',')} on:change={(event) => handleFile(event, field.name)} class="block w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 text-sm dark:border-gray-700">
+              {#if selectedRecord?.[field.name]}<p class="mt-1 text-xs text-gray-500">Current file: {displayValue(selectedRecord[field.name])}</p>{/if}
+            {:else if field.type === 'select' && field.options?.values}
+              <select id={`modal-field-${field.name}`} value={String(fieldValue(field))} on:change={(event) => handleSelect(event, field.name)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700"><option value="">Select...</option>{#each field.options.values as option}<option value={option}>{option}</option>{/each}</select>
+            {:else if field.type === 'editor' || field.type === 'json'}
+              <textarea id={`modal-field-${field.name}`} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} rows="5" class="w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 font-mono text-sm dark:border-gray-700"></textarea>
+            {:else}
+              <input id={`modal-field-${field.name}`} type={field.type === 'number' ? 'number' : field.type === 'email' ? 'email' : 'text'} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700">
+            {/if}
+          </div>
+        {/each}
+      </div>
+      <div class="mt-6 flex justify-end gap-3 border-t border-gray-200 pt-5 dark:border-white/10"><button type="button" class="rounded-xl border border-gray-300 px-5 py-3 text-sm font-semibold dark:border-gray-700" on:click={() => showModal = false}>Cancel</button><button type="submit" class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm disabled:opacity-50" disabled={saving}>{saving ? 'Saving...' : selectedRecord ? 'Save changes' : 'Create record'}</button></div>
+    </form>
+  </div>
 {/if}
