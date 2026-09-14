@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  qmtechapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: qmtechapp
+    ports:
+      - "80:5173"
+    environment:
+      - PORT=5173
+      - NODE_ENV=production
+    restart: always
