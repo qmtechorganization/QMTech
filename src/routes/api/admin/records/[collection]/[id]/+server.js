@@ -13,7 +13,10 @@ async function authorize(cookies, collection) {
 export async function PATCH({ cookies, params, request }) {
   try {
     const pb = await authorize(cookies, params.collection);
-    return json(await pb.collection(params.collection).update(params.id, await request.json()));
+    const body = request.headers.get('content-type')?.includes('multipart/form-data')
+      ? await request.formData()
+      : await request.json();
+    return json(await pb.collection(params.collection).update(params.id, body));
   } catch (error) {
     return json({ message: error.message || 'Unable to update record.' }, { status: error.status || 500 });
   }

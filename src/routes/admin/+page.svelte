@@ -1,8 +1,18 @@
 <script lang="ts">
   import { onMount } from 'svelte';
   import ThemeToggle from '$lib/components/ThemeToggle.svelte';
+  import { COLLECTION_PRESENTATION, collectionLabel } from '$lib/admin/collectionConfig';
 
-  type Collection = { name: string; id: string; fields: Record<string, unknown>[] };
+  type Field = {
+    name: string;
+    type: string;
+    required?: boolean;
+    system?: boolean;
+    options?: { values?: string[] };
+    mimeTypes?: string[];
+  };
+
+  type Collection = { name: string; id: string; fields: Field[] };
   type RecordData = { id: string; [key: string]: unknown };
 
   let email = '';
@@ -16,12 +26,22 @@
   let selectedCollection: Collection | null = null;
   let records: RecordData[] = [];
   let selectedRecord: RecordData | null = null;
-  let recordJson = '{}';
+  let formData: Record<string, unknown> = {};
+  let fileData: Record<string, File> = {};
+  let saving = false;
 
-  async function api(path: string, options: { method?: string; body?: string; headers?: Record<string, string> } = {}) {
+  $: editableFields = selectedCollection?.fields.filter(
+    (field) => !field.system && !['id', 'created', 'updated'].includes(field.name)
+  ) || [];
+  $: configuredTableFields = COLLECTION_PRESENTATION[selectedCollection?.name || '']?.tableFields || [];
+  $: tableFields = configuredTableFields
+    .map((name) => editableFields.find((field) => field.name === name))
+    .filter((field): field is Field => Boolean(field));
+
+  async function api(path: string, options: { method?: string; body?: string | FormData; headers?: Record<string, string> } = {}) {
     const response = await fetch(path, {
       ...options,
-      headers: { 'content-type': 'application/json', ...(options.headers || {}) }
+      headers: options.body instanceof FormData ? options.headers : { 'content-type': 'application/json', ...(options.headers || {}) }
     });
     const body = await response.json();
     if (!response.ok) throw new Error(body.message || 'Request failed.');
@@ -78,48 +98,98 @@
     try {
       const result = await api(`/api/admin/records/${encodeURIComponent(collection.name)}`);
       records = result.items;
-      if (records.length > 0) selectRecord(records[0]);
-      else recordJson = '{}';
+      newRecord();
     } catch (requestError) {
       error = requestError instanceof Error ? requestError.message : 'Unable to load records.';
     }
   }
 
-  function selectRecord(record: RecordData) {
-    selectedRecord = record;
-    recordJson = JSON.stringify(record, null, 2);
-  }
-
   function newRecord() {
     selectedRecord = null;
-    recordJson = '{}';
+    formData = {};
+    fileData = {};
     error = '';
+  }
+
+  function editRecord(record: RecordData) {
+    selectedRecord = record;
+    formData = {};
+    fileData = {};
+    for (const field of editableFields) formData[field.name] = record[field.name] ?? defaultValue(field);
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function defaultValue(field: Field) {
+    if (field.type === 'bool') return false;
+    if (field.type === 'number') return 0;
+    return '';
+  }
+
+  function updateField(name: string, value: unknown) {
+    formData = { ...formData, [name]: value };
+  }
+
+  function handleCheckbox(event: Event, name: string) {
+    updateField(name, (event.currentTarget as HTMLInputElement).checked);
+  }
+
+  function handleSelect(event: Event, name: string) {
+    updateField(name, (event.currentTarget as HTMLSelectElement).value);
+  }
+
+  function handleInput(event: Event, field: Field) {
+    const value = (event.currentTarget as HTMLInputElement | HTMLTextAreaElement).value;
+    updateField(field.name, field.type === 'number' ? Number(value) : value);
+  }
+
+  function handleFile(event: Event, name: string) {
+    const file = (event.currentTarget as HTMLInputElement).files?.[0];
+    if (file) fileData = { ...fileData, [name]: file };
+  }
+
+  function fieldValue(field: Field) {
+    return formData[field.name] ?? defaultValue(field);
+  }
+
+  function fieldLabel(field: Field) {
+    return COLLECTION_PRESENTATION[selectedCollection?.name || '']?.fieldLabels?.[field.name] || field.name;
+  }
+
+  function displayValue(value: unknown) {
+    if (value === null || value === undefined || value === '') return '-';
+    if (Array.isArray(value)) return value.join(', ');
+    if (typeof value === 'boolean') return value ? 'Yes' : 'No';
+    return String(value);
   }
 
   async function saveRecord() {
-    error = '';
     if (!selectedCollection) return;
+    error = '';
+    saving = true;
     try {
-      const data = JSON.parse(recordJson);
       const path = `/api/admin/records/${encodeURIComponent(selectedCollection.name)}`;
+      const payload = new FormData();
+      for (const [name, value] of Object.entries(formData)) {
+        if (value !== undefined && value !== null && value !== '') payload.append(name, String(value));
+      }
+      for (const [name, file] of Object.entries(fileData)) payload.append(name, file);
       const saved = selectedRecord
-        ? await api(`${path}/${selectedRecord.id}`, { method: 'PATCH', body: JSON.stringify(data) })
-        : await api(path, { method: 'POST', body: JSON.stringify(data) });
+        ? await api(`${path}/${selectedRecord.id}`, { method: 'PATCH', body: payload })
+        : await api(path, { method: 'POST', body: payload });
       await selectCollection(selectedCollection);
-      selectRecord(saved);
+      editRecord(saved);
     } catch (requestError) {
-      error = requestError instanceof Error && requestError.message.includes('JSON')
-        ? 'Record must contain valid JSON.'
-        : requestError instanceof Error ? requestError.message : 'Unable to save record.';
+      error = requestError instanceof Error ? requestError.message : 'Unable to save record.';
+    } finally {
+      saving = false;
     }
   }
 
-  async function deleteRecord() {
-    if (!selectedRecord || !confirm('Delete this record?')) return;
-    if (!selectedCollection) return;
+  async function deleteRecord(record: RecordData) {
+    if (!selectedCollection || !confirm('Delete this record?')) return;
     error = '';
     try {
-      await api(`/api/admin/records/${encodeURIComponent(selectedCollection.name)}/${selectedRecord.id}`, { method: 'DELETE' });
+      await api(`/api/admin/records/${encodeURIComponent(selectedCollection.name)}/${record.id}`, { method: 'DELETE' });
       await selectCollection(selectedCollection);
     } catch (requestError) {
       error = requestError instanceof Error ? requestError.message : 'Unable to delete record.';
@@ -147,39 +217,81 @@
     </form>
   </main>
 {:else}
-  <main class="min-h-screen bg-body px-6 py-8 text-body md:px-12">
-    <header class="mb-8 flex flex-wrap items-center justify-between gap-4">
-      <div><p class="text-sm font-semibold uppercase tracking-widest text-accent">QM Tech</p><h1 class="font-heading text-4xl font-medium">Admin panel</h1></div>
-      <div class="flex items-center gap-4 text-sm"><ThemeToggle /><span>{adminEmail}</span><button class="rounded-full border border-gray-300 px-4 py-2 dark:border-gray-700" on:click={logout}>Sign out</button></div>
+  <main class="min-h-screen bg-[#f6f7f8] text-gray-900 dark:bg-[#101211] dark:text-white">
+    <header class="border-b border-gray-200 bg-white dark:border-white/10 dark:bg-[#171a18]">
+      <div class="mx-auto flex max-w-[1600px] items-center justify-between gap-6 px-5 py-4 lg:px-8">
+        <div class="flex items-center gap-3"><div class="grid h-9 w-9 place-items-center rounded-xl bg-accent font-bold text-white">Q</div><div><p class="text-xs font-semibold uppercase tracking-[0.18em] text-accent">QM Tech</p><h1 class="font-heading text-xl font-semibold">Content manager</h1></div></div>
+        <div class="flex items-center gap-3 text-sm"><ThemeToggle /><span class="hidden text-gray-500 sm:inline dark:text-gray-300">{adminEmail}</span><button class="rounded-lg border border-gray-300 px-3 py-2 font-medium hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-white/10" on:click={logout}>Sign out</button></div>
+      </div>
     </header>
 
-    {#if error}<p class="mb-5 rounded-xl bg-red-500/10 px-4 py-3 text-red-600">{error}</p>{/if}
-    <div class="grid gap-6 lg:grid-cols-[16rem_1fr]">
-      <aside class="rounded-2xl border border-gray-200 p-4 dark:border-white/10">
-        <div class="mb-3 flex items-center justify-between"><h2 class="font-semibold">Collections</h2></div>
-        <div class="space-y-1">
-          {#each collections as collection}
-            <button class={`block w-full rounded-lg px-3 py-2 text-left text-sm ${selectedCollection?.name === collection.name ? 'bg-accent text-white' : 'hover:bg-gray-100 dark:hover:bg-white/10'}`} on:click={() => selectCollection(collection)}>{collection.name}</button>
-          {/each}
+    <div class="mx-auto flex max-w-[1600px] flex-col gap-6 px-5 py-6 lg:flex-row lg:px-8">
+      <aside class="w-full shrink-0 lg:w-60">
+        <div class="rounded-2xl border border-gray-200 bg-white p-3 dark:border-white/10 dark:bg-[#171a18] lg:sticky lg:top-6">
+          <div class="mb-3 px-3 pt-2"><p class="text-xs font-bold uppercase tracking-widest text-gray-400">Manage</p><p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Collections</p></div>
+          <nav class="flex gap-1 overflow-x-auto lg:block lg:space-y-1">
+            {#each collections as collection}
+              <button class={`whitespace-nowrap rounded-xl px-3 py-2.5 text-left text-sm font-medium transition lg:block lg:w-full ${selectedCollection?.name === collection.name ? 'bg-accent text-white shadow-sm' : 'text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-white/10'}`} on:click={() => selectCollection(collection)}>{collectionLabel(collection.name)}</button>
+            {/each}
+          </nav>
         </div>
       </aside>
 
-      <section class="grid gap-6 xl:grid-cols-[18rem_1fr]">
-        <div class="rounded-2xl border border-gray-200 p-4 dark:border-white/10">
-          <div class="mb-4 flex items-center justify-between"><h2 class="font-semibold">{selectedCollection?.name || 'Records'}</h2><button class="rounded-lg bg-accent px-3 py-2 text-sm font-semibold text-white" on:click={newRecord}>New</button></div>
-          <div class="space-y-1">
-            {#each records as record}
-              <button class={`block w-full truncate rounded-lg px-3 py-2 text-left text-sm ${selectedRecord?.id === record.id ? 'bg-gray-200 dark:bg-white/20' : 'hover:bg-gray-100 dark:hover:bg-white/10'}`} on:click={() => selectRecord(record)}>{record.name || record.title || record.email || record.id}</button>
-            {/each}
-          </div>
+      <section class="min-w-0 flex-1">
+        {#if error}<div class="mb-5 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700 dark:border-red-900/50 dark:bg-red-950/20 dark:text-red-300">{error}</div>{/if}
+        <div class="mb-5 flex flex-wrap items-end justify-between gap-4">
+          <div><p class="mb-1 text-sm text-gray-500 dark:text-gray-400">Collection</p><h2 class="font-heading text-3xl font-semibold">{selectedCollection ? collectionLabel(selectedCollection.name) : 'Select a collection'}</h2></div>
+          <button class="rounded-xl bg-accent px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:brightness-95" on:click={newRecord} disabled={!selectedCollection}>+ New record</button>
         </div>
 
-        <div class="rounded-2xl border border-gray-200 p-5 dark:border-white/10">
-          <div class="mb-4 flex items-center justify-between"><h2 class="font-semibold">{selectedRecord ? 'Edit record' : 'New record'}</h2>{#if selectedRecord}<button class="text-sm text-red-600" on:click={deleteRecord}>Delete</button>{/if}</div>
-          <p class="mb-3 text-sm text-gray-500">Edit the record as JSON. PocketBase field names and types are preserved.</p>
-          <textarea class="min-h-[32rem] w-full rounded-xl border border-gray-300 bg-transparent p-4 font-mono text-sm dark:border-gray-700" bind:value={recordJson} spellcheck="false"></textarea>
-          <button class="mt-4 rounded-full bg-accent px-6 py-3 font-semibold text-white" on:click={saveRecord} disabled={!selectedCollection}>Save record</button>
-        </div>
+        {#if selectedCollection}
+          <div class="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-white/10 dark:bg-[#171a18]">
+            <div class="overflow-x-auto">
+              <table class="w-full min-w-[720px] text-left text-sm">
+                <thead class="border-b border-gray-200 bg-gray-50 text-xs uppercase tracking-wider text-gray-500 dark:border-white/10 dark:bg-white/5 dark:text-gray-400">
+                  <tr><th class="w-16 px-5 py-4">#</th>{#each tableFields as field}<th class="px-5 py-4">{fieldLabel(field)}</th>{/each}<th class="px-5 py-4 text-right">Actions</th></tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100 dark:divide-white/10">
+                  {#if records.length === 0}
+                    <tr><td colspan={tableFields.length + 2} class="px-5 py-12 text-center text-gray-500">No records found.</td></tr>
+                  {:else}
+                    {#each records as record, index}
+                      <tr class="transition hover:bg-gray-50 dark:hover:bg-white/[0.03]">
+                        <td class="px-5 py-4 text-gray-400">{index + 1}</td>
+                        {#each tableFields as field}<td class="max-w-[15rem] truncate px-5 py-4 font-medium">{displayValue(record[field.name])}</td>{/each}
+                        <td class="whitespace-nowrap px-5 py-4 text-right"><button class="mr-3 font-semibold text-accent hover:underline" on:click={() => editRecord(record)}>Edit</button><button class="font-semibold text-red-600 hover:underline" on:click={() => deleteRecord(record)}>Delete</button></td>
+                      </tr>
+                    {/each}
+                  {/if}
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="mt-6 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm dark:border-white/10 dark:bg-[#171a18]">
+            <div class="mb-6 flex items-center justify-between gap-4"><div><p class="text-xs font-bold uppercase tracking-wider text-gray-400">{selectedRecord ? 'Editing' : 'Creating'}</p><h3 class="mt-1 text-xl font-semibold">{selectedRecord ? selectedRecord.id : 'New record'}</h3></div>{#if selectedRecord}<button class="text-sm font-semibold text-gray-500 hover:text-body dark:text-gray-400" on:click={newRecord}>Clear form</button>{/if}</div>
+            <div class="grid gap-5 md:grid-cols-2">
+              {#each editableFields as field}
+                <div class={field.type === 'editor' || field.type === 'json' ? 'md:col-span-2' : ''}>
+                  <label class="mb-2 block text-sm font-semibold" for={`field-${field.name}`}>{fieldLabel(field)}{#if field.required}<span class="ml-1 text-red-500">*</span>{/if}</label>
+                  {#if field.type === 'bool'}
+                    <label class="flex h-11 items-center gap-3 rounded-xl border border-gray-300 px-4 dark:border-gray-700"><input id={`field-${field.name}`} type="checkbox" checked={Boolean(fieldValue(field))} on:change={(event) => handleCheckbox(event, field.name)} class="h-4 w-4 accent-green-600"><span class="text-sm">Enabled</span></label>
+                  {:else if field.type === 'file'}
+                    <input id={`field-${field.name}`} type="file" accept={field.mimeTypes?.join(',')} on:change={(event) => handleFile(event, field.name)} class="block w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 text-sm dark:border-gray-700">
+                    {#if selectedRecord?.[field.name]}<p class="mt-1 text-xs text-gray-500">Current file: {displayValue(selectedRecord[field.name])}</p>{/if}
+                  {:else if field.type === 'select' && field.options?.values}
+                    <select id={`field-${field.name}`} value={String(fieldValue(field))} on:change={(event) => handleSelect(event, field.name)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700"><option value="">Select...</option>{#each field.options.values as option}<option value={option}>{option}</option>{/each}</select>
+                  {:else if field.type === 'editor' || field.type === 'json'}
+                    <textarea id={`field-${field.name}`} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} rows="5" class="w-full rounded-xl border border-gray-300 bg-transparent px-3 py-2 font-mono text-sm dark:border-gray-700"></textarea>
+                  {:else}
+                    <input id={`field-${field.name}`} type={field.type === 'number' ? 'number' : field.type === 'email' ? 'email' : 'text'} value={String(fieldValue(field))} on:input={(event) => handleInput(event, field)} class="h-11 w-full rounded-xl border border-gray-300 bg-transparent px-3 dark:border-gray-700">
+                  {/if}
+                </div>
+              {/each}
+            </div>
+            <div class="mt-6 flex justify-end"><button class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-white shadow-sm disabled:opacity-50" on:click={saveRecord} disabled={saving}>{saving ? 'Saving...' : selectedRecord ? 'Save changes' : 'Create record'}</button></div>
+          </div>
+        {/if}
       </section>
     </div>
   </main>

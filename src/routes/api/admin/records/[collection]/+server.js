@@ -24,7 +24,10 @@ export async function GET({ cookies, params, url }) {
 export async function POST({ cookies, params, request }) {
   try {
     const pb = await authorize(cookies, params.collection);
-    return json(await pb.collection(params.collection).create(await request.json()), { status: 201 });
+    const body = request.headers.get('content-type')?.includes('multipart/form-data')
+      ? await request.formData()
+      : await request.json();
+    return json(await pb.collection(params.collection).create(body), { status: 201 });
   } catch (error) {
     return json({ message: error.message || 'Unable to create record.' }, { status: error.status || 500 });
   }
