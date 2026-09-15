@@ -15,7 +15,7 @@
     import { pb } from "$lib/pocketobase";
     import { SITE_URL, SITE_NAME, SITE_DESCRIPTION, OG_IMAGE, OG_IMAGE_ALT } from '$lib/seo';
 
-    const pageTitle = 'Diseño de Páginas Web en Rio Bravo, Reynosa y México | QM Tech';
+    const pageTitle = 'QM Tech';
     const pageDescription = 'Crea la página web de tu negocio con QM Tech. Diseño web profesional en Rio Bravo, Reynosa y todo México: landing pages desde $5,000 MXN y sitios a medida. SEO, hosting y cotización gratis.';
     const pageUrl = SITE_URL + '/';
 
@@ -46,7 +46,7 @@
         try {
             const clients = await pb.collection('clients').getFullList();
             clientStore.set(clients);
-        
+
         } catch (error) {
             console.error('Failed to fetch client records:', error);
         }
